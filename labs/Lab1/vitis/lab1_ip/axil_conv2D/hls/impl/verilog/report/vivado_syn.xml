@@ -1,0 +1,105 @@
+<profile>
+<RunData>
+  <RUN_TYPE>synth</RUN_TYPE>
+  <VIVADO_VERSION>v.2024.1.2</VIVADO_VERSION>
+  <ROOT_MODULE_CELL>bd_0_i/hls_inst</ROOT_MODULE_CELL>
+</RunData>
+<TimingReport>
+  <TargetClockPeriod>10.000</TargetClockPeriod>
+  <AchievedClockPeriod>6.594</AchievedClockPeriod>
+  <CLOCK_NAME>ap_clk</CLOCK_NAME>
+  <CP_FINAL>6.594</CP_FINAL>
+  <CP_ROUTE>NA</CP_ROUTE>
+  <CP_SYNTH>6.594</CP_SYNTH>
+  <CP_TARGET>10.000</CP_TARGET>
+  <SLACK_FINAL>3.406</SLACK_FINAL>
+  <SLACK_ROUTE></SLACK_ROUTE>
+  <SLACK_SYNTH>3.406</SLACK_SYNTH>
+  <TIMING_MET>TRUE</TIMING_MET>
+  <TNS_FINAL>0.000</TNS_FINAL>
+  <TNS_ROUTE>NA</TNS_ROUTE>
+  <TNS_SYNTH>0.000</TNS_SYNTH>
+  <WNS_FINAL>3.406</WNS_FINAL>
+  <WNS_ROUTE>NA</WNS_ROUTE>
+  <WNS_SYNTH>3.406</WNS_SYNTH>
+</TimingReport>
+<AreaReport>
+  <Resources>
+    <BRAM>8</BRAM>
+    <CLB>0</CLB>
+    <DSP>5</DSP>
+    <FF>340</FF>
+    <LATCH>0</LATCH>
+    <LUT>445</LUT>
+    <SRL>21</SRL>
+    <URAM>0</URAM>
+  </Resources>
+  <AvailableResources>
+    <BRAM>120</BRAM>
+    <CLB>0</CLB>
+    <DSP>80</DSP>
+    <FF>35200</FF>
+    <LUT>17600</LUT>
+    <URAM>0</URAM>
+  </AvailableResources>
+</AreaReport>
+<RtlModules>
+  <RtlModule CELL="inst" DEPTH="0" FILE_NAME="bd_0_hls_inst_0.v" ORIG_REF_NAME="axil_conv2D" TOP_CELL="bd_0_i/hls_inst/inst">
+    <SubModules count="7">BUS1_s_axi_U ama_addmuladd_2ns_7ns_7ns_7ns_13_4_1_U2 flow_control_loop_delay_pipe_U mac_muladd_7ns_7ns_7ns_13_4_1_U3 mac_muladd_8ns_8s_16s_17_4_1_U4 mac_muladd_8ns_8s_17s_18_4_1_U5 mul_8ns_8s_16_1_1_U1</SubModules>
+    <Resources BRAM="8" DSP="5" FF="340" LUT="445" LUTRAM="64" LogicLUT="360" RAMB36="4" SRL="21"/>
+    <LocalResources FF="172" LUT="42" LogicLUT="21" SRL="21"/>
+  </RtlModule>
+  <RtlModule CELL="inst/BUS1_s_axi_U" DEPTH="1" FILE_NAME="axil_conv2D.v" ORIG_REF_NAME="axil_conv2D_BUS1_s_axi">
+    <Resources BRAM="8" FF="166" LUT="265" LUTRAM="64" LogicLUT="201" RAMB36="4"/>
+    <LocalResources FF="102" LUT="83" LogicLUT="83"/>
+  </RtlModule>
+  <RtlModule CELL="inst/ama_addmuladd_2ns_7ns_7ns_7ns_13_4_1_U2" DEPTH="1" FILE_NAME="axil_conv2D.v" ORIG_REF_NAME="axil_conv2D_ama_addmuladd_2ns_7ns_7ns_7ns_13_4_1">
+    <Resources DSP="1" LUT="22" LogicLUT="22"/>
+  </RtlModule>
+  <RtlModule CELL="inst/flow_control_loop_delay_pipe_U" DEPTH="1" FILE_NAME="axil_conv2D.v" ORIG_REF_NAME="axil_conv2D_flow_control_loop_delay_pipe">
+    <Resources FF="2" LUT="44" LogicLUT="44"/>
+  </RtlModule>
+  <RtlModule CELL="inst/mac_muladd_7ns_7ns_7ns_13_4_1_U3" DEPTH="1" FILE_NAME="axil_conv2D.v" ORIG_REF_NAME="axil_conv2D_mac_muladd_7ns_7ns_7ns_13_4_1">
+    <Resources DSP="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/mac_muladd_8ns_8s_16s_17_4_1_U4" DEPTH="1" FILE_NAME="axil_conv2D.v" ORIG_REF_NAME="axil_conv2D_mac_muladd_8ns_8s_16s_17_4_1">
+    <Resources DSP="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/mac_muladd_8ns_8s_17s_18_4_1_U5" DEPTH="1" FILE_NAME="axil_conv2D.v" ORIG_REF_NAME="axil_conv2D_mac_muladd_8ns_8s_17s_18_4_1">
+    <Resources DSP="1" LUT="71" LogicLUT="71"/>
+  </RtlModule>
+  <RtlModule CELL="inst/mul_8ns_8s_16_1_1_U1" DEPTH="1" FILE_NAME="axil_conv2D.v" ORIG_REF_NAME="axil_conv2D_mul_8ns_8s_16_1_1">
+    <Resources DSP="1" LUT="1" LogicLUT="1"/>
+  </RtlModule>
+</RtlModules>
+<TimingPaths>
+  <TPATH DATAPATH_DELAY="4.809" DATAPATH_LOGIC_DELAY="4.009" DATAPATH_NET_DELAY="0.800" ENDPOINT_PIN="bd_0_i/hls_inst/inst/mac_muladd_8ns_8s_16s_17_4_1_U4/axil_conv2D_mac_muladd_8ns_8s_16s_17_4_1_DSP48_0_U/p_reg_reg/C[0]" LOGIC_LEVELS="0" MAX_FANOUT="1" SLACK="3.406" STARTPOINT_PIN="bd_0_i/hls_inst/inst/mul_8ns_8s_16_1_1_U1/tmp_product/CLK">
+    <CELL NAME="bd_0_i/hls_inst/inst/mul_8ns_8s_16_1_1_U1/tmp_product" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" FILE_NAME="axil_conv2D_mul_8ns_8s_16_1_1.v" LINE_NUMBER="42"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/mac_muladd_8ns_8s_16s_17_4_1_U4/axil_conv2D_mac_muladd_8ns_8s_16s_17_4_1_DSP48_0_U/p_reg_reg" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" FILE_NAME="axil_conv2D_mac_muladd_8ns_8s_16s_17_4_1.v" LINE_NUMBER="35"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="4.809" DATAPATH_LOGIC_DELAY="4.009" DATAPATH_NET_DELAY="0.800" ENDPOINT_PIN="bd_0_i/hls_inst/inst/mac_muladd_8ns_8s_16s_17_4_1_U4/axil_conv2D_mac_muladd_8ns_8s_16s_17_4_1_DSP48_0_U/p_reg_reg/C[10]" LOGIC_LEVELS="0" MAX_FANOUT="1" SLACK="3.406" STARTPOINT_PIN="bd_0_i/hls_inst/inst/mul_8ns_8s_16_1_1_U1/tmp_product/CLK">
+    <CELL NAME="bd_0_i/hls_inst/inst/mul_8ns_8s_16_1_1_U1/tmp_product" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" FILE_NAME="axil_conv2D_mul_8ns_8s_16_1_1.v" LINE_NUMBER="42"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/mac_muladd_8ns_8s_16s_17_4_1_U4/axil_conv2D_mac_muladd_8ns_8s_16s_17_4_1_DSP48_0_U/p_reg_reg" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" FILE_NAME="axil_conv2D_mac_muladd_8ns_8s_16s_17_4_1.v" LINE_NUMBER="35"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="4.809" DATAPATH_LOGIC_DELAY="4.009" DATAPATH_NET_DELAY="0.800" ENDPOINT_PIN="bd_0_i/hls_inst/inst/mac_muladd_8ns_8s_16s_17_4_1_U4/axil_conv2D_mac_muladd_8ns_8s_16s_17_4_1_DSP48_0_U/p_reg_reg/C[11]" LOGIC_LEVELS="0" MAX_FANOUT="1" SLACK="3.406" STARTPOINT_PIN="bd_0_i/hls_inst/inst/mul_8ns_8s_16_1_1_U1/tmp_product/CLK">
+    <CELL NAME="bd_0_i/hls_inst/inst/mul_8ns_8s_16_1_1_U1/tmp_product" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" FILE_NAME="axil_conv2D_mul_8ns_8s_16_1_1.v" LINE_NUMBER="42"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/mac_muladd_8ns_8s_16s_17_4_1_U4/axil_conv2D_mac_muladd_8ns_8s_16s_17_4_1_DSP48_0_U/p_reg_reg" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" FILE_NAME="axil_conv2D_mac_muladd_8ns_8s_16s_17_4_1.v" LINE_NUMBER="35"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="4.809" DATAPATH_LOGIC_DELAY="4.009" DATAPATH_NET_DELAY="0.800" ENDPOINT_PIN="bd_0_i/hls_inst/inst/mac_muladd_8ns_8s_16s_17_4_1_U4/axil_conv2D_mac_muladd_8ns_8s_16s_17_4_1_DSP48_0_U/p_reg_reg/C[12]" LOGIC_LEVELS="0" MAX_FANOUT="1" SLACK="3.406" STARTPOINT_PIN="bd_0_i/hls_inst/inst/mul_8ns_8s_16_1_1_U1/tmp_product/CLK">
+    <CELL NAME="bd_0_i/hls_inst/inst/mul_8ns_8s_16_1_1_U1/tmp_product" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" FILE_NAME="axil_conv2D_mul_8ns_8s_16_1_1.v" LINE_NUMBER="42"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/mac_muladd_8ns_8s_16s_17_4_1_U4/axil_conv2D_mac_muladd_8ns_8s_16s_17_4_1_DSP48_0_U/p_reg_reg" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" FILE_NAME="axil_conv2D_mac_muladd_8ns_8s_16s_17_4_1.v" LINE_NUMBER="35"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="4.809" DATAPATH_LOGIC_DELAY="4.009" DATAPATH_NET_DELAY="0.800" ENDPOINT_PIN="bd_0_i/hls_inst/inst/mac_muladd_8ns_8s_16s_17_4_1_U4/axil_conv2D_mac_muladd_8ns_8s_16s_17_4_1_DSP48_0_U/p_reg_reg/C[13]" LOGIC_LEVELS="0" MAX_FANOUT="1" SLACK="3.406" STARTPOINT_PIN="bd_0_i/hls_inst/inst/mul_8ns_8s_16_1_1_U1/tmp_product/CLK">
+    <CELL NAME="bd_0_i/hls_inst/inst/mul_8ns_8s_16_1_1_U1/tmp_product" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" FILE_NAME="axil_conv2D_mul_8ns_8s_16_1_1.v" LINE_NUMBER="42"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/mac_muladd_8ns_8s_16s_17_4_1_U4/axil_conv2D_mac_muladd_8ns_8s_16s_17_4_1_DSP48_0_U/p_reg_reg" PRIMITIVE_TYPE="MULT.dsp.DSP48E1" FILE_NAME="axil_conv2D_mac_muladd_8ns_8s_16s_17_4_1.v" LINE_NUMBER="35"/>
+  </TPATH>
+</TimingPaths>
+<VivadoReportFiles>
+  <ReportFile TYPE="design_analysis" PATH="verilog/report/axil_conv2D_design_analysis_synth.rpt"/>
+  <ReportFile TYPE="failfast" PATH="verilog/report/axil_conv2D_failfast_synth.rpt"/>
+  <ReportFile TYPE="timing" PATH="verilog/report/axil_conv2D_timing_synth.rpt"/>
+  <ReportFile TYPE="timing_paths" PATH="verilog/report/axil_conv2D_timing_paths_synth.rpt"/>
+  <ReportFile TYPE="utilization" PATH="verilog/report/axil_conv2D_utilization_synth.rpt"/>
+  <ReportFile TYPE="utilization_hierarchical" PATH="verilog/report/axil_conv2D_utilization_hierarchical_synth.rpt"/>
+</VivadoReportFiles>
+</profile>

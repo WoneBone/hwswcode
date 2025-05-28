@@ -1,0 +1,48 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1.2 (lin64) Build 5164865 Thu Sep  5 14:36:28 MDT 2024
+| Date         : Fri May 16 13:38:58 2025
+| Host         : ares running 64-bit Linux Mint 21.2
+| Command      : report_utilization -hierarchical -hierarchical_depth 5 -file ./report/axil_conv2D_utilization_hierarchical_synth.rpt
+| Design       : bd_0_wrapper
+| Device       : xc7z010clg400-1
+| Speed File   : -1
+| Design State : Synthesized
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++----------------------------------------------------------------------+--------------------------------------------------------------------------+------------+------------+---------+------+-----+--------+--------+------------+
+|                               Instance                               |                                  Module                                  | Total LUTs | Logic LUTs | LUTRAMs | SRLs | FFs | RAMB36 | RAMB18 | DSP Blocks |
++----------------------------------------------------------------------+--------------------------------------------------------------------------+------------+------------+---------+------+-----+--------+--------+------------+
+| bd_0_wrapper                                                         |                                                                    (top) |        445 |        360 |      64 |   21 | 340 |      4 |      0 |          5 |
+|   bd_0_i                                                             |                                                                     bd_0 |        445 |        360 |      64 |   21 | 340 |      4 |      0 |          5 |
+|     hls_inst                                                         |                                                          bd_0_hls_inst_0 |        445 |        360 |      64 |   21 | 340 |      4 |      0 |          5 |
+|       (hls_inst)                                                     |                                                          bd_0_hls_inst_0 |          0 |          0 |       0 |    0 |   0 |      0 |      0 |          0 |
+|       inst                                                           |                                              bd_0_hls_inst_0_axil_conv2D |        445 |        360 |      64 |   21 | 340 |      4 |      0 |          5 |
+|         (inst)                                                       |                                              bd_0_hls_inst_0_axil_conv2D |         42 |         21 |       0 |   21 | 172 |      0 |      0 |          0 |
+|         BUS1_s_axi_U                                                 |                                   bd_0_hls_inst_0_axil_conv2D_BUS1_s_axi |        265 |        201 |      64 |    0 | 166 |      4 |      0 |          0 |
+|           (BUS1_s_axi_U)                                             |                                   bd_0_hls_inst_0_axil_conv2D_BUS1_s_axi |         83 |         83 |       0 |    0 | 102 |      0 |      0 |          0 |
+|           int_image_in                                               |               bd_0_hls_inst_0_axil_conv2D_BUS1_s_axi_ram__parameterized0 |         48 |         48 |       0 |    0 |   0 |      2 |      0 |          0 |
+|           int_image_out                                              |               bd_0_hls_inst_0_axil_conv2D_BUS1_s_axi_ram__parameterized1 |         48 |         48 |       0 |    0 |   0 |      2 |      0 |          0 |
+|           int_weights                                                |                               bd_0_hls_inst_0_axil_conv2D_BUS1_s_axi_ram |         86 |         22 |      64 |    0 |  64 |      0 |      0 |          0 |
+|         ama_addmuladd_2ns_7ns_7ns_7ns_13_4_1_U2                      |         bd_0_hls_inst_0_axil_conv2D_ama_addmuladd_2ns_7ns_7ns_7ns_13_4_1 |         22 |         22 |       0 |    0 |   0 |      0 |      0 |          1 |
+|           axil_conv2D_ama_addmuladd_2ns_7ns_7ns_7ns_13_4_1_DSP48_0_U | bd_0_hls_inst_0_axil_conv2D_ama_addmuladd_2ns_7ns_7ns_7ns_13_4_1_DSP48_0 |         22 |         22 |       0 |    0 |   0 |      0 |      0 |          1 |
+|         flow_control_loop_delay_pipe_U                               |                 bd_0_hls_inst_0_axil_conv2D_flow_control_loop_delay_pipe |         44 |         44 |       0 |    0 |   2 |      0 |      0 |          0 |
+|         mac_muladd_7ns_7ns_7ns_13_4_1_U3                             |                bd_0_hls_inst_0_axil_conv2D_mac_muladd_7ns_7ns_7ns_13_4_1 |          0 |          0 |       0 |    0 |   0 |      0 |      0 |          1 |
+|           axil_conv2D_mac_muladd_7ns_7ns_7ns_13_4_1_DSP48_0_U        |        bd_0_hls_inst_0_axil_conv2D_mac_muladd_7ns_7ns_7ns_13_4_1_DSP48_0 |          0 |          0 |       0 |    0 |   0 |      0 |      0 |          1 |
+|         mac_muladd_8ns_8s_16s_17_4_1_U4                              |                 bd_0_hls_inst_0_axil_conv2D_mac_muladd_8ns_8s_16s_17_4_1 |          0 |          0 |       0 |    0 |   0 |      0 |      0 |          1 |
+|           axil_conv2D_mac_muladd_8ns_8s_16s_17_4_1_DSP48_0_U         |         bd_0_hls_inst_0_axil_conv2D_mac_muladd_8ns_8s_16s_17_4_1_DSP48_0 |          0 |          0 |       0 |    0 |   0 |      0 |      0 |          1 |
+|         mac_muladd_8ns_8s_17s_18_4_1_U5                              |                 bd_0_hls_inst_0_axil_conv2D_mac_muladd_8ns_8s_17s_18_4_1 |         71 |         71 |       0 |    0 |   0 |      0 |      0 |          1 |
+|           axil_conv2D_mac_muladd_8ns_8s_17s_18_4_1_DSP48_0_U         |         bd_0_hls_inst_0_axil_conv2D_mac_muladd_8ns_8s_17s_18_4_1_DSP48_0 |         71 |         71 |       0 |    0 |   0 |      0 |      0 |          1 |
+|         mul_8ns_8s_16_1_1_U1                                         |                            bd_0_hls_inst_0_axil_conv2D_mul_8ns_8s_16_1_1 |          1 |          1 |       0 |    0 |   0 |      0 |      0 |          1 |
++----------------------------------------------------------------------+--------------------------------------------------------------------------+------------+------------+---------+------+-----+--------+--------+------------+
+
+

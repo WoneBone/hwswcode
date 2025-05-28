@@ -1,0 +1,97 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1.2 (lin64) Build 5164865 Thu Sep  5 14:36:28 MDT 2024
+| Date         : Fri May 16 13:40:23 2025
+| Host         : ares running 64-bit Linux Mint 21.2
+| Command      : report_control_sets -verbose -file bd_0_wrapper_control_sets_placed.rpt
+| Design       : bd_0_wrapper
+| Device       : xc7z010
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    19 |
+|    Minimum number of control sets                        |    19 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    44 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    19 |
+| >= 0 to < 4        |     0 |
+| >= 4 to < 6        |     3 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     2 |
+| >= 14 to < 16      |     1 |
+| >= 16              |    13 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               5 |            3 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              29 |           13 |
+| Yes          | No                    | No                     |             223 |           64 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              83 |           24 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------+---------------------------------------------------------------------------+--------------------------------------------------------------------------------+------------------+----------------+--------------+
+| Clock Signal |                               Enable Signal                               |                                Set/Reset Signal                                | Slice Load Count | Bel Load Count | Bels / Slice |
++--------------+---------------------------------------------------------------------------+--------------------------------------------------------------------------------+------------------+----------------+--------------+
+|  ap_clk      | bd_0_i/hls_inst/inst/BUS1_s_axi_U/int_weights/E[0]                        | bd_0_i/hls_inst/inst/BUS1_s_axi_U/ap_rst_n_inv                                 |                4 |              4 |         1.00 |
+|  ap_clk      | bd_0_i/hls_inst/inst/ap_CS_fsm_pp0_stage2                                 |                                                                                |                1 |              5 |         5.00 |
+|  ap_clk      |                                                                           |                                                                                |                3 |              5 |         1.67 |
+|  ap_clk      | bd_0_i/hls_inst/inst/weights_ce02                                         |                                                                                |                5 |             13 |         2.60 |
+|  ap_clk      | bd_0_i/hls_inst/inst/BUS1_s_axi_U/aw_hs                                   |                                                                                |                4 |             13 |         3.25 |
+|  ap_clk      | bd_0_i/hls_inst/inst/flow_control_loop_delay_pipe_U/E[0]                  | bd_0_i/hls_inst/inst/flow_control_loop_delay_pipe_U/ap_sig_allocacmp_k20_load1 |                3 |             14 |         4.67 |
+|  ap_clk      | bd_0_i/hls_inst/inst/BUS1_s_axi_U/int_weights/p_0_in0_out[8]              |                                                                                |                2 |             16 |         8.00 |
+|  ap_clk      | bd_0_i/hls_inst/inst/BUS1_s_axi_U/int_weights/p_0_in0_out[16]             |                                                                                |                2 |             16 |         8.00 |
+|  ap_clk      | bd_0_i/hls_inst/inst/BUS1_s_axi_U/int_weights/p_0_in0_out[24]             |                                                                                |                2 |             16 |         8.00 |
+|  ap_clk      | bd_0_i/hls_inst/inst/BUS1_s_axi_U/int_weights/p_0_in0_out[0]              |                                                                                |                2 |             16 |         8.00 |
+|  ap_clk      | bd_0_i/hls_inst/inst/flow_control_loop_delay_pipe_U/ap_loop_init_reg_0[0] |                                                                                |                6 |             21 |         3.50 |
+|  ap_clk      | bd_0_i/hls_inst/inst/ap_CS_fsm_pp0_stage1                                 |                                                                                |                7 |             26 |         3.71 |
+|  ap_clk      |                                                                           | bd_0_i/hls_inst/inst/BUS1_s_axi_U/ap_rst_n_inv                                 |               13 |             29 |         2.23 |
+|  ap_clk      | bd_0_i/hls_inst/inst/BUS1_s_axi_U/rdata[31]_i_1_n_125                     |                                                                                |               11 |             32 |         2.91 |
+|  ap_clk      | bd_0_i/hls_inst/inst/BUS1_s_axi_U/int_weights/int_weights_ce1             |                                                                                |               11 |             32 |         2.91 |
+|  ap_clk      | bd_0_i/hls_inst/inst/BUS1_s_axi_U/int_weights/E[0]                        |                                                                                |                8 |             32 |         4.00 |
+|  ap_clk      | bd_0_i/hls_inst/inst/BUS1_s_axi_U/int_bias[31]_i_1_n_125                  | bd_0_i/hls_inst/inst/BUS1_s_axi_U/ap_rst_n_inv                                 |                8 |             32 |         4.00 |
+|  ap_clk      | bd_0_i/hls_inst/inst/flow_control_loop_delay_pipe_U/ap_ready_int          | bd_0_i/hls_inst/inst/flow_control_loop_delay_pipe_U/ap_sig_allocacmp_k20_load1 |                9 |             33 |         3.67 |
+|  ap_clk      | bd_0_i/hls_inst/inst/ap_CS_fsm_pp0_stage0                                 |                                                                                |               11 |             70 |         6.36 |
++--------------+---------------------------------------------------------------------------+--------------------------------------------------------------------------------+------------------+----------------+--------------+
+
+

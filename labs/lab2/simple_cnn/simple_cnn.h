@@ -8,7 +8,7 @@
 #include "gemm.h"
 
 /* ============================= START OF RUN CONFIGURATION ============================ */
-//#define EMBEDDED                         /* uncomment to run in Zynq */
+#define EMBEDDED                         /* uncomment to run in Zynq */
 //#define USE_GEMM                         /* uncomment to use GEMM */
 //#define PRINT_IMAGE                      /* uncomment to print input images to console */
 //#define PRINT_TIME_PER_LAYER             /* uncomment to print elapsed time per layer on zynq */
@@ -46,6 +46,7 @@
     MEM_REGION :                                       /* does nothing else */ \
     (MEM_REGION / ALIGN_CONSTANT + 1) * ALIGN_CONSTANT /* aligns memory region to next ALIGN_CONSTANT */ \
     )
+
 
 /* Size in bytes of reserved memory regions */
 #define MEM_BIN_IMAGES 0x01000000

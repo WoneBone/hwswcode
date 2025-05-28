@@ -1,0 +1,12 @@
+INFO: [vitis-run 60-1548] Creating build summary session with primary output /home/ares/Desktop/CO-Proj/Labs/Lab1/vitis_better/3ip_conv_hls/axil_conv2D/axil_conv2D.hlsrun_csim_summary, at Tue May 20 16:52:32 2025
+INFO: [vitis-run 82-31] Launching vitis_hls: vitis_hls -nolog -run csim -work_dir /home/ares/Desktop/CO-Proj/Labs/Lab1/vitis_better/3ip_conv_hls/axil_conv2D -config /home/ares/Desktop/CO-Proj/Labs/Lab1/vitis_better/3ip_conv_hls/hls_config.cfg -cmdlineconfig /home/ares/Desktop/CO-Proj/Labs/Lab1/vitis_better/3ip_conv_hls/axil_conv2D/hls/config.cmdline
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2024.1.2 (64-bit)
+  **** SW Build 5096458 on Sep  5 2024
+  **** IP Build 5164407 on Fri Sep  6 08:18:11 MDT 2024
+  **** SharedData Build 5164864 on Thu Sep 05 13:09:09 MDT 2024
+  **** Start of session at: Tue May 20 16:52:41 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source /home/ares/tools/Xilinx/Vitis_HLS/2024.1/scripts/vitis_hls/hls.tcl -notrace

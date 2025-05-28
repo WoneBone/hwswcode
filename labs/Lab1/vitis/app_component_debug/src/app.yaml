@@ -1,0 +1,3 @@
+domain_path: /home/ares/Desktop/CO-Proj/Labs/Lab1/vitis/platform_debug/export/platform_debug/sw/standalone_ps7_cortexa9_0
+app_src_dir: /home/ares/tools/Xilinx/Vitis/2024.1/data/embeddedsw/lib/sw_apps/empty_application
+template: empty_application

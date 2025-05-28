@@ -1,0 +1,9 @@
+verilog xil_defaultlib --include "/home/ares/tools/Xilinx/Vivado/2024.1/data/xilinx_vip/include" --include "../../../../viviado_3ip.gen/sources_1/bd/ip_3/ipshared/ec67/hdl" --include "../../../../viviado_3ip.gen/sources_1/bd/ip_3/ipshared/d47c/hdl" --include "../../../../viviado_3ip.gen/sources_1/bd/ip_3/ip/ip_3_axil_conv2D_0_0/drivers/axil_conv2D_v1_0/src" --include "../../../../viviado_3ip.gen/sources_1/bd/ip_3/ip/ip_3_axil_conv2D_1_0/drivers/axil_conv2D_v1_0/src" --include "../../../../viviado_3ip.gen/sources_1/bd/ip_3/ip/ip_3_axil_conv2D_2_0/drivers/axil_conv2D_v1_0/src" \
+"../../../bd/ip_3/ip/ip_3_processing_system7_0_0/sim/ip_3_processing_system7_0_0.v" \
+"../../../bd/ip_3/ip/ip_3_xbar_0/sim/ip_3_xbar_0.v" \
+"../../../bd/ip_3/ip/ip_3_auto_pc_0/sim/ip_3_auto_pc_0.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

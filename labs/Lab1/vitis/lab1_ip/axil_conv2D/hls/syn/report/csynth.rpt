@@ -1,0 +1,161 @@
+
+
+================================================================
+== Synthesis Summary Report of 'axil_conv2D'
+================================================================
++ General Information: 
+    * Date:           Tue May 13 16:16:33 2025
+    * Version:        2024.1.2 (Build 5096458 on Sep  5 2024)
+    * Project:        axil_conv2D
+    * Solution:       hls (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z010-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-------------------------+------+------+---------+-----------+----------+---------+-------+----------+--------+--------+----------+-----------+-----+
+    |         Modules         | Issue|      | Latency |  Latency  | Iteration|         |  Trip |          |        |        |          |           |     |
+    |         & Loops         | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count | Pipelined|  BRAM  |   DSP  |    FF    |    LUT    | URAM|
+    +-------------------------+------+------+---------+-----------+----------+---------+-------+----------+--------+--------+----------+-----------+-----+
+    |+ axil_conv2D            |    II|  1.03|    66574|  6.657e+05|         -|    66564|      -|    rewind|  8 (6%)|  4 (5%)|  823 (2%)|  1044 (5%)|    -|
+    | o loop_i_loop_j_loop_k  |    II|  7.30|    66572|  6.657e+05|        12|        3|  22188|       yes|       -|       -|         -|          -|    -|
+    +-------------------------+------+------+---------+-----------+----------+---------+-------+----------+--------+--------+----------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* S_AXILITE Interfaces
++------------+------------+---------------+--------+----------+-------------------+
+| Interface  | Data Width | Address Width | Offset | Register | Resource Estimate |
++------------+------------+---------------+--------+----------+-------------------+
+| s_axi_BUS1 | 32         | 15            | 8192   | 0        | BRAM=8            |
++------------+------------+---------------+--------+----------+-------------------+
+
+* S_AXILITE Registers
++------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface  | Register | Offset | Width | Access | Description                      | Bit Fields                                                           |
++------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_BUS1 | CTRL     | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_BUS1 | GIER     | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_BUS1 | IP_IER   | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_BUS1 | IP_ISR   | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
+| s_axi_BUS1 | bias     | 0x20   | 32    | W      | Data signal of bias              |                                                                      |
++------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++-----------+-----------+-------------+
+| Argument  | Direction | Datatype    |
++-----------+-----------+-------------+
+| image_in  | in        | ap_uint<8>* |
+| image_out | out       | ap_uint<8>* |
+| weights   | in        | ap_int<8>*  |
+| bias      | in        | ap_int<32>  |
++-----------+-----------+-------------+
+
+* SW-to-HW Mapping
++-----------+--------------+----------+----------------------------------------+
+| Argument  | HW Interface | HW Type  | HW Info                                |
++-----------+--------------+----------+----------------------------------------+
+| image_in  | s_axi_BUS1   | memory   | name=image_in offset=8192 range=8192   |
+| image_out | s_axi_BUS1   | memory   | name=image_out offset=16384 range=8192 |
+| weights   | s_axi_BUS1   | memory   | name=weights offset=16 range=16        |
+| bias      | s_axi_BUS1   | register | name=bias offset=0x20 range=32         |
++-----------+--------------+----------+----------------------------------------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++-------------------------------------------+-----+--------+----------------+--------+-----------+---------+
+| Name                                      | DSP | Pragma | Variable       | Op     | Impl      | Latency |
++-------------------------------------------+-----+--------+----------------+--------+-----------+---------+
+| + axil_conv2D                             | 4   |        |                |        |           |         |
+|   select_ln24_fu_359_p3                   |     |        | select_ln24    | select | auto_sel  | 0       |
+|   select_ln24_1_fu_559_p3                 |     |        | select_ln24_1  | select | auto_sel  | 0       |
+|   xor_ln24_fu_295_p2                      |     |        | xor_ln24       | xor    | auto      | 0       |
+|   and_ln24_fu_301_p2                      |     |        | and_ln24       | and    | auto      | 0       |
+|   i_2_fu_307_p3                           |     |        | i_2            | select | auto_sel  | 0       |
+|   j_2_fu_367_p2                           |     |        | j_2            | add    | fabric    | 0       |
+|   empty_fu_315_p2                         |     |        | empty          | or     | auto      | 0       |
+|   k_mid2_fu_321_p3                        |     |        | k_mid2         | select | auto_sel  | 0       |
+|   acc_1_mid2_fu_566_p3                    |     |        | acc_1_mid2     | select | auto_sel  | 0       |
+|   j_fu_373_p3                             |     |        | j              | select | auto_sel  | 0       |
+|   mac_muladd_7ns_7ns_7ns_13_4_1_U3        | 1   |        | mul_ln26       | mul    | dsp_slice | 3       |
+|   sub_ln35_fu_457_p2                      |     |        | sub_ln35       | sub    | fabric    | 0       |
+|   ama_addmuladd_2ns_7ns_7ns_7ns_13_4_1_U2 | 1   |        | add_ln36       | add    | dsp_slice | 3       |
+|   ama_addmuladd_2ns_7ns_7ns_7ns_13_4_1_U2 | 1   |        | zext_ln36_2    | zext   | dsp_slice | 3       |
+|   ama_addmuladd_2ns_7ns_7ns_7ns_13_4_1_U2 | 1   |        | mul_ln36       | mul    | dsp_slice | 3       |
+|   ama_addmuladd_2ns_7ns_7ns_7ns_13_4_1_U2 | 1   |        | image_1d_idx   | add    | dsp_slice | 3       |
+|   mac_muladd_8ns_8s_17s_18_4_1_U5         | 1   |        | mul_ln39       | mul    | dsp_slice | 3       |
+|   mac_muladd_8ns_8s_17s_18_4_1_U5         | 1   |        | sext_ln38      | sext   | dsp_slice | 3       |
+|   add_ln38_fu_471_p2                      |     |        | add_ln38       | add    | fabric    | 0       |
+|   image_1d_idx_1_fu_510_p2                |     |        | image_1d_idx_1 | add    | fabric    | 0       |
+|   mul_8ns_8s_16_1_1_U1                    |     |        | mul_ln39_1     | mul    | auto      | 0       |
+|   add_ln38_2_fu_482_p2                    |     |        | add_ln38_2     | add    | fabric    | 0       |
+|   image_1d_idx_2_fu_492_p2                |     |        | image_1d_idx_2 | add    | fabric    | 0       |
+|   mac_muladd_8ns_8s_16s_17_4_1_U4         | 1   |        | mul_ln39_2     | mul    | dsp_slice | 3       |
+|   mac_muladd_8ns_8s_16s_17_4_1_U4         | 1   |        | sext_ln39_3    | sext   | dsp_slice | 3       |
+|   mac_muladd_8ns_8s_16s_17_4_1_U4         | 1   |        | add_ln39       | add    | dsp_slice | 3       |
+|   mac_muladd_8ns_8s_17s_18_4_1_U5         | 1   |        | add_ln39_1     | add    | dsp_slice | 3       |
+|   acc_2_fu_575_p2                         |     |        | acc_2          | add    | fabric    | 0       |
+|   k_fu_384_p2                             |     |        | k              | add    | fabric    | 0       |
+|   icmp_ln31_fu_389_p2                     |     |        | icmp_ln31      | seteq  | auto      | 0       |
+|   icmp_ln44_fu_591_p2                     |     |        | icmp_ln44      | setgt  | auto      | 0       |
+|   acc_sat_fu_612_p3                       |     |        | acc_sat        | select | auto_sel  | 0       |
+|   empty_14_fu_619_p2                      |     |        | empty_14       | or     | auto      | 0       |
+|   acc_sat_1_fu_624_p3                     |     |        | acc_sat_1      | select | auto_sel  | 0       |
+|   mac_muladd_7ns_7ns_7ns_13_4_1_U3        | 1   |        | add_ln51       | add    | dsp_slice | 3       |
+|   add_ln24_fu_395_p2                      |     |        | add_ln24       | add    | fabric    | 0       |
+|   add_ln26_1_fu_401_p2                    |     |        | add_ln26_1     | add    | fabric    | 0       |
+|   select_ln26_1_fu_407_p3                 |     |        | select_ln26_1  | select | auto_sel  | 0       |
+|   icmp_ln26_fu_415_p2                     |     |        | icmp_ln26      | seteq  | auto      | 0       |
+|   i_fu_336_p2                             |     |        | i              | add    | fabric    | 0       |
+|   icmp_ln24_fu_421_p2                     |     |        | icmp_ln24      | seteq  | auto      | 0       |
++-------------------------------------------+-----+--------+----------------+--------+-----------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
++----------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
+| Name           | Usage     | Type      | BRAM | URAM | Pragma | Variable | Impl | Latency | Bitwidth, Depth, |
+|                |           |           |      |      |        |          |      |         | Banks            |
++----------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
+| + axil_conv2D  |           |           | 8    | 0    |        |          |      |         |                  |
+|   BUS1_s_axi_U | interface | s_axilite | 8    |      |        |          |      |         |                  |
++----------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------+--------------------------------------+-------------------------------------------------------------------+
+| Type      | Options                              | Location                                                          |
++-----------+--------------------------------------+-------------------------------------------------------------------+
+| interface | s_axilite port=return bundle=BUS1    | ../../lab1_files/hls/axil_conv2D.cpp:17 in axil_conv2d, return    |
+| interface | s_axilite port=image_in bundle=BUS1  | ../../lab1_files/hls/axil_conv2D.cpp:18 in axil_conv2d, image_in  |
+| interface | s_axilite port=image_out bundle=BUS1 | ../../lab1_files/hls/axil_conv2D.cpp:19 in axil_conv2d, image_out |
+| interface | s_axilite port=weights bundle=BUS1   | ../../lab1_files/hls/axil_conv2D.cpp:20 in axil_conv2d, weights   |
+| interface | s_axilite port=bias bundle=BUS1      | ../../lab1_files/hls/axil_conv2D.cpp:21 in axil_conv2d, bias      |
+| pipeline  |                                      | ../../lab1_files/hls/axil_conv2D.cpp:32 in axil_conv2d            |
++-----------+--------------------------------------+-------------------------------------------------------------------+
+
+

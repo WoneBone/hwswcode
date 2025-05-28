@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2024.1.2 (64-bit)
+# SW Build 5164865 on Thu Sep  5 14:36:28 MDT 2024
+# IP Build 5164407 on Fri Sep  6 08:18:11 MDT 2024
+# SharedData Build 5164864 on Thu Sep 05 13:09:09 MDT 2024
+# Start of session at: Tue May 20 17:21:39 2025
+# Process ID: 4664
+# Current directory: /home/ares/Desktop/CO-Proj/Labs/Lab1/vitis_better/viviado_3ip/viviado_3ip.runs/ip_3_rst_ps7_0_100M_0_synth_1
+# Command line: vivado -log ip_3_rst_ps7_0_100M_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ip_3_rst_ps7_0_100M_0.tcl
+# Log file: /home/ares/Desktop/CO-Proj/Labs/Lab1/vitis_better/viviado_3ip/viviado_3ip.runs/ip_3_rst_ps7_0_100M_0_synth_1/ip_3_rst_ps7_0_100M_0.vds
+# Journal file: /home/ares/Desktop/CO-Proj/Labs/Lab1/vitis_better/viviado_3ip/viviado_3ip.runs/ip_3_rst_ps7_0_100M_0_synth_1/vivado.jou
+# Running On        :ares
+# Platform          :Linuxmint
+# Operating System  :Linux Mint 21.2
+# Processor Detail  :Intel(R) Core(TM) i5-4200U CPU @ 1.60GHz
+# CPU Frequency     :2600.000 MHz
+# CPU Physical cores:2
+# CPU Logical cores :4
+# Host memory       :8217 MB
+# Swap memory       :2147 MB
+# Total Virtual     :10364 MB
+# Available Virtual :5830 MB
+#-----------------------------------------------------------
+source ip_3_rst_ps7_0_100M_0.tcl -notrace

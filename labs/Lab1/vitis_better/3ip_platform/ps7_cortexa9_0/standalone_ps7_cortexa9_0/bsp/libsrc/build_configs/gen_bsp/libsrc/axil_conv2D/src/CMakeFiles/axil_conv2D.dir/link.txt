@@ -1,0 +1,2 @@
+arm-none-eabi-ar qc libaxil_conv2D.a CMakeFiles/axil_conv2D.dir/xaxil_conv2d.c.obj CMakeFiles/axil_conv2D.dir/xaxil_conv2d_sinit.c.obj CMakeFiles/axil_conv2D.dir/xaxil_conv2d_linux.c.obj CMakeFiles/axil_conv2D.dir/xaxil_conv2d_g.c.obj
+/home/ares/tools/Xilinx/Vitis/2024.1/gnu/aarch32/lin/gcc-arm-none-eabi/bin/arm-none-eabi-ranlib libaxil_conv2D.a

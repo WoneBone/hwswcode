@@ -1,0 +1,3 @@
+/home/ares/Desktop/CO-Proj/Labs/Lab1/vitis/platform_debug/zynq_fsbl/build/CMakeFiles/fsbl.elf.dir
+/home/ares/Desktop/CO-Proj/Labs/Lab1/vitis/platform_debug/zynq_fsbl/build/CMakeFiles/edit_cache.dir
+/home/ares/Desktop/CO-Proj/Labs/Lab1/vitis/platform_debug/zynq_fsbl/build/CMakeFiles/rebuild_cache.dir

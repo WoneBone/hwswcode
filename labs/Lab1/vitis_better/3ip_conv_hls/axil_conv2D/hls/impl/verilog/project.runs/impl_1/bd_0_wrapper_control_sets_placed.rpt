@@ -1,0 +1,101 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1.2 (lin64) Build 5164865 Thu Sep  5 14:36:28 MDT 2024
+| Date         : Fri May 23 16:01:48 2025
+| Host         : ares running 64-bit Linux Mint 21.2
+| Command      : report_control_sets -verbose -file bd_0_wrapper_control_sets_placed.rpt
+| Design       : bd_0_wrapper
+| Device       : xc7z010
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    23 |
+|    Minimum number of control sets                        |    23 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    41 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    23 |
+| >= 0 to < 4        |     0 |
+| >= 4 to < 6        |     2 |
+| >= 6 to < 8        |     3 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |     1 |
+| >= 12 to < 14      |     2 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    15 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               5 |            1 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              39 |           16 |
+| Yes          | No                    | No                     |             265 |           85 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              66 |           14 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------+------------------+----------------+--------------+
+| Clock Signal |                                                                            Enable Signal                                                                            |                Set/Reset Signal                | Slice Load Count | Bel Load Count | Bels / Slice |
++--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------+------------------+----------------+--------------+
+|  ap_clk      | bd_0_i/hls_inst/inst/grp_axil_conv2D_Pipeline_loop_k_fu_141/ap_CS_fsm_pp0_stage2                                                                                    |                                                |                3 |              4 |         1.33 |
+|  ap_clk      |                                                                                                                                                                     |                                                |                1 |              5 |         5.00 |
+|  ap_clk      | bd_0_i/hls_inst/inst/grp_axil_conv2D_Pipeline_loop_k_fu_141/ap_CS_fsm_pp0_stage1                                                                                    |                                                |                3 |              6 |         2.00 |
+|  ap_clk      | bd_0_i/hls_inst/inst/grp_axil_conv2D_Pipeline_loop_k_fu_141/ap_CS_fsm_reg[0]_0[0]                                                                                   |                                                |                2 |              6 |         3.00 |
+|  ap_clk      | bd_0_i/hls_inst/inst/ap_CS_fsm_state7                                                                                                                               | bd_0_i/hls_inst/inst/j_reg_129                 |                1 |              7 |         7.00 |
+|  ap_clk      | bd_0_i/hls_inst/inst/ap_CS_fsm_state4                                                                                                                               |                                                |                3 |             11 |         3.67 |
+|  ap_clk      | bd_0_i/hls_inst/inst/BUS1_s_axi_U/aw_hs                                                                                                                             |                                                |                4 |             13 |         3.25 |
+|  ap_clk      | bd_0_i/hls_inst/inst/grp_axil_conv2D_Pipeline_loop_k_fu_141/image_1d_idx_reg_5010                                                                                   |                                                |                6 |             13 |         2.17 |
+|  ap_clk      | bd_0_i/hls_inst/inst/BUS1_s_axi_U/int_weights/p_0_in0_out[8]                                                                                                        |                                                |                2 |             16 |         8.00 |
+|  ap_clk      | bd_0_i/hls_inst/inst/BUS1_s_axi_U/int_weights/p_0_in0_out[16]                                                                                                       |                                                |                2 |             16 |         8.00 |
+|  ap_clk      | bd_0_i/hls_inst/inst/BUS1_s_axi_U/int_weights/p_0_in0_out[0]                                                                                                        |                                                |                2 |             16 |         8.00 |
+|  ap_clk      | bd_0_i/hls_inst/inst/BUS1_s_axi_U/int_weights/p_0_in0_out[24]                                                                                                       |                                                |                2 |             16 |         8.00 |
+|  ap_clk      | bd_0_i/hls_inst/inst/ap_CS_fsm_state3                                                                                                                               |                                                |                6 |             20 |         3.33 |
+|  ap_clk      | bd_0_i/hls_inst/inst/ap_CS_fsm_state1                                                                                                                               |                                                |                5 |             21 |         4.20 |
+|  ap_clk      | bd_0_i/hls_inst/inst/grp_axil_conv2D_Pipeline_loop_k_fu_141/flow_control_loop_pipe_sequential_init_U/grp_axil_conv2D_Pipeline_loop_k_fu_141_ap_start_reg_reg_0      |                                                |                6 |             21 |         3.50 |
+|  ap_clk      | bd_0_i/hls_inst/inst/ap_CS_fsm_state2                                                                                                                               |                                                |                7 |             22 |         3.14 |
+|  ap_clk      | bd_0_i/hls_inst/inst/grp_axil_conv2D_Pipeline_loop_k_fu_141/ama_addmuladd_2ns_7ns_7ns_7ns_13_4_1_U2/axil_conv2D_ama_addmuladd_2ns_7ns_7ns_7ns_13_4_1_DSP48_0_U/E[0] | bd_0_i/hls_inst/inst/BUS1_s_axi_U/SR[0]        |                6 |             27 |         4.50 |
+|  ap_clk      | bd_0_i/hls_inst/inst/BUS1_s_axi_U/int_bias[31]_i_1_n_3                                                                                                              | bd_0_i/hls_inst/inst/BUS1_s_axi_U/ap_rst_n_inv |                7 |             32 |         4.57 |
+|  ap_clk      | bd_0_i/hls_inst/inst/BUS1_s_axi_U/rdata[31]_i_1_n_3                                                                                                                 |                                                |               13 |             32 |         2.46 |
+|  ap_clk      | bd_0_i/hls_inst/inst/BUS1_s_axi_U/int_weights/int_weights_ce1                                                                                                       |                                                |                8 |             32 |         4.00 |
+|  ap_clk      | bd_0_i/hls_inst/inst/ap_CS_fsm_state5                                                                                                                               |                                                |               11 |             32 |         2.91 |
+|  ap_clk      | bd_0_i/hls_inst/inst/grp_axil_conv2D_Pipeline_loop_k_fu_141/grp_axil_conv2D_Pipeline_loop_k_fu_141_weights_ce0                                                      |                                                |                8 |             32 |         4.00 |
+|  ap_clk      |                                                                                                                                                                     | bd_0_i/hls_inst/inst/BUS1_s_axi_U/ap_rst_n_inv |               16 |             39 |         2.44 |
++--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------+------------------+----------------+--------------+
+
+

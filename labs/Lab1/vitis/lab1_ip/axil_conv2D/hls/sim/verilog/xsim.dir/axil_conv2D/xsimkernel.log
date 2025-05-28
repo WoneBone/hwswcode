@@ -1,0 +1,7 @@
+Running: xsim.dir/axil_conv2D/xsimk -simmode gui -wdb axil_conv2D.wdb -simrunnum 0 -socket 57231
+Design successfully loaded
+Design Loading Memory Usage: 21188 KB (Peak: 21196 KB)
+Design Loading CPU Usage: 40 ms
+Simulation completed
+Simulation Memory Usage: 116180 KB (Peak: 160456 KB)
+Simulation CPU Usage: 7170 ms

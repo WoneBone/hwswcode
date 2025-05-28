@@ -1,0 +1,272 @@
+<ENTRY>
+{
+ "thisFile": "/home/ares/Desktop/CO-Proj/Labs/Lab1/vitis_better/3ip_conv_hls/axil_conv2D/axil_conv2D.hlsrun_impl_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Fri May 23 15:52:01 2025",
+ "timestampMillis": "1748011921715",
+ "buildStep": {
+  "cmdId": "cd6a6f1f-b447-4178-a193-b798b6ddc7d6",
+  "name": "vitis-run",
+  "logFile": "/home/ares/Desktop/CO-Proj/Labs/Lab1/vitis_better/3ip_conv_hls/axil_conv2D/logs/axil_conv2D.steps.log",
+  "commandLine": "/home/ares/tools/Xilinx/Vitis/2024.1/bin/unwrapped/lnx64.o/vitis-run  --mode hls --impl --config /home/ares/Desktop/CO-Proj/Labs/Lab1/vitis_better/3ip_conv_hls/hls_config.cfg --work_dir axil_conv2D ",
+  "args": [
+   "--mode",
+   "hls",
+   "--impl",
+   "--config",
+   "/home/ares/Desktop/CO-Proj/Labs/Lab1/vitis_better/3ip_conv_hls/hls_config.cfg",
+   "--work_dir",
+   "axil_conv2D"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/ares/Desktop/CO-Proj/Labs/Lab1/vitis_better/3ip_conv_hls"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri May 23 15:52:01 2025",
+ "timestampMillis": "1748011921715",
+ "status": {
+  "cmdId": "cd6a6f1f-b447-4178-a193-b798b6ddc7d6",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Fri May 23 15:52:34 2025",
+ "timestampMillis": "1748011954239",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_IMPL",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "axil_conv2D",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/ares/Desktop/CO-Proj/Labs/Lab1/lab1_files/hls/axil_conv2D.cpp",
+     "/home/ares/Desktop/CO-Proj/Labs/Lab1/lab1_files/hls/axil_conv2D.h"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2024.1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri May 23 15:52:34 2025",
+ "timestampMillis": "1748011954244",
+ "buildStep": {
+  "cmdId": "4ec66da2-83ae-4952-a40a-9f96fcd937ab",
+  "name": "export_design",
+  "logFile": "/home/ares/Desktop/CO-Proj/Labs/Lab1/vitis_better/3ip_conv_hls/axil_conv2D/hls/hls.log",
+  "commandLine": "export_design -flow impl",
+  "args": [
+   "-flow",
+   "impl"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/ares/Desktop/CO-Proj/Labs/Lab1/vitis_better/3ip_conv_hls"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri May 23 15:52:34 2025",
+ "timestampMillis": "1748011954245",
+ "status": {
+  "cmdId": "4ec66da2-83ae-4952-a40a-9f96fcd937ab",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri May 23 15:52:34 2025",
+ "timestampMillis": "1748011954249",
+ "report": {
+  "path": "/home/ares/Desktop/CO-Proj/Labs/Lab1/vitis_better/3ip_conv_hls/axil_conv2D/hls/impl/verilog",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_RTL_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri May 23 15:52:34 2025",
+ "timestampMillis": "1748011954263",
+ "report": {
+  "path": "/home/ares/Desktop/CO-Proj/Labs/Lab1/vitis_better/3ip_conv_hls/axil_conv2D/hls/impl/report/verilog/export_syn.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "HLS_RTL_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri May 23 15:52:34 2025",
+ "timestampMillis": "1748011954264",
+ "report": {
+  "path": "/home/ares/Desktop/CO-Proj/Labs/Lab1/vitis_better/3ip_conv_hls/axil_conv2D/hls/impl/report/verilog/export_syn.xml",
+  "name": "",
+  "fileType": "XML",
+  "reportType": "HLS_RTL_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri May 23 15:52:34 2025",
+ "timestampMillis": "1748011954274",
+ "report": {
+  "path": "/home/ares/Desktop/CO-Proj/Labs/Lab1/vitis_better/3ip_conv_hls/axil_conv2D/hls/impl/verilog",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_PLACE_AND_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri May 23 15:52:34 2025",
+ "timestampMillis": "1748011954278",
+ "report": {
+  "path": "/home/ares/Desktop/CO-Proj/Labs/Lab1/vitis_better/3ip_conv_hls/axil_conv2D/hls/impl/report/verilog/export_impl.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "HLS_PLACE_AND_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri May 23 15:52:34 2025",
+ "timestampMillis": "1748011954279",
+ "report": {
+  "path": "/home/ares/Desktop/CO-Proj/Labs/Lab1/vitis_better/3ip_conv_hls/axil_conv2D/hls/impl/report/verilog/export_impl.xml",
+  "name": "",
+  "fileType": "XML",
+  "reportType": "HLS_PLACE_AND_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri May 23 16:02:50 2025",
+ "timestampMillis": "1748012570950",
+ "report": {
+  "path": "/home/ares/Desktop/CO-Proj/Labs/Lab1/vitis_better/3ip_conv_hls/axil_conv2D/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_RTL_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri May 23 16:02:51 2025",
+ "timestampMillis": "1748012571199",
+ "report": {
+  "path": "/home/ares/Desktop/CO-Proj/Labs/Lab1/vitis_better/3ip_conv_hls/axil_conv2D/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_PLACE_AND_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri May 23 16:02:51 2025",
+ "timestampMillis": "1748012571200",
+ "status": {
+  "cmdId": "4ec66da2-83ae-4952-a40a-9f96fcd937ab",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri May 23 16:03:01 2025",
+ "timestampMillis": "1748012581458",
+ "status": {
+  "cmdId": "cd6a6f1f-b447-4178-a193-b798b6ddc7d6",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri May 23 16:03:01 2025",
+ "timestampMillis": "1748012581837",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri May 23 16:03:01 2025",
+ "timestampMillis": "1748012581844",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

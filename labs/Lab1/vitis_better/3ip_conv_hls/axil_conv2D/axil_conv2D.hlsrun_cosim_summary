@@ -1,0 +1,227 @@
+<ENTRY>
+{
+ "thisFile": "/home/ares/Desktop/CO-Proj/Labs/Lab1/vitis_better/3ip_conv_hls/axil_conv2D/axil_conv2D.hlsrun_cosim_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Sun May 25 15:21:09 2025",
+ "timestampMillis": "1748182869460",
+ "buildStep": {
+  "cmdId": "b6380fee-16cb-4802-b28e-03dc64645a9e",
+  "name": "vitis-run",
+  "logFile": "/home/ares/Desktop/CO-Proj/Labs/Lab1/vitis_better/3ip_conv_hls/axil_conv2D/logs/axil_conv2D.steps.log",
+  "commandLine": "/home/ares/tools/Xilinx/Vitis/2024.1/bin/unwrapped/lnx64.o/vitis-run  --mode hls --cosim --config /home/ares/Desktop/CO-Proj/Labs/Lab1/vitis_better/3ip_conv_hls/hls_config.cfg --work_dir axil_conv2D ",
+  "args": [
+   "--mode",
+   "hls",
+   "--cosim",
+   "--config",
+   "/home/ares/Desktop/CO-Proj/Labs/Lab1/vitis_better/3ip_conv_hls/hls_config.cfg",
+   "--work_dir",
+   "axil_conv2D"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/ares/Desktop/CO-Proj/Labs/Lab1/vitis_better/3ip_conv_hls"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun May 25 15:21:09 2025",
+ "timestampMillis": "1748182869460",
+ "status": {
+  "cmdId": "b6380fee-16cb-4802-b28e-03dc64645a9e",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Sun May 25 15:22:12 2025",
+ "timestampMillis": "1748182932237",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_RTL_COSIM",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "axil_conv2D",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/ares/Desktop/CO-Proj/Labs/Lab1/lab1_files/hls/axil_conv2D.cpp",
+     "/home/ares/Desktop/CO-Proj/Labs/Lab1/lab1_files/hls/axil_conv2D.h"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2024.1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sun May 25 15:22:12 2025",
+ "timestampMillis": "1748182932239",
+ "buildStep": {
+  "cmdId": "7049bdf8-3e27-4725-865b-9ea3c8c7bd29",
+  "name": "cosim_design",
+  "logFile": "/home/ares/Desktop/CO-Proj/Labs/Lab1/vitis_better/3ip_conv_hls/axil_conv2D/hls/hls.log",
+  "commandLine": "cosim_design",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/ares/Desktop/CO-Proj/Labs/Lab1/vitis_better/3ip_conv_hls"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun May 25 15:22:12 2025",
+ "timestampMillis": "1748182932240",
+ "status": {
+  "cmdId": "7049bdf8-3e27-4725-865b-9ea3c8c7bd29",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun May 25 15:22:12 2025",
+ "timestampMillis": "1748182932240",
+ "report": {
+  "path": "/home/ares/Desktop/CO-Proj/Labs/Lab1/vitis_better/3ip_conv_hls/axil_conv2D/hls/sim/report/axil_conv2D_cosim.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "HLS_COSIMULATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun May 25 15:22:12 2025",
+ "timestampMillis": "1748182932245",
+ "report": {
+  "path": "/home/ares/Desktop/CO-Proj/Labs/Lab1/vitis_better/3ip_conv_hls/axil_conv2D/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_DATAFLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun May 25 15:22:12 2025",
+ "timestampMillis": "1748182932246",
+ "report": {
+  "path": "/home/ares/Desktop/CO-Proj/Labs/Lab1/vitis_better/3ip_conv_hls/axil_conv2D/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_FUNCTION_CALL_GRAPH_COSIM",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun May 25 15:22:12 2025",
+ "timestampMillis": "1748182932247",
+ "report": {
+  "path": "/home/ares/Desktop/CO-Proj/Labs/Lab1/vitis_better/3ip_conv_hls/axil_conv2D/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_TIMELINE_TRACE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun May 25 15:22:12 2025",
+ "timestampMillis": "1748182932249",
+ "report": {
+  "path": "/home/ares/Desktop/CO-Proj/Labs/Lab1/vitis_better/3ip_conv_hls/axil_conv2D/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_WAVE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun May 25 15:24:13 2025",
+ "timestampMillis": "1748183053043",
+ "status": {
+  "cmdId": "7049bdf8-3e27-4725-865b-9ea3c8c7bd29",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun May 25 15:24:13 2025",
+ "timestampMillis": "1748183053693",
+ "status": {
+  "cmdId": "b6380fee-16cb-4802-b28e-03dc64645a9e",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun May 25 15:24:13 2025",
+ "timestampMillis": "1748183053694",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun May 25 15:24:13 2025",
+ "timestampMillis": "1748183053694",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

@@ -1,0 +1,8 @@
+{
+  "workspaceRoot": "/home/ares/Desktop/CO-Proj/Labs/Lab1/vitis",
+  "mapping": {
+    "/home/ares/Desktop/CO-Proj/Labs/Lab1/lab1_files/hls/tb_axil_conv2D.cpp": "lab1_ip",
+    "/home/ares/Desktop/CO-Proj/Labs/Lab1/lab1_files/hls/axil_conv2D.cpp": "lab1_ip",
+    "/home/ares/Desktop/CO-Proj/Labs/Lab1/lab1_files/hls/axil_conv2D.h": "lab1_ip"
+  }
+}

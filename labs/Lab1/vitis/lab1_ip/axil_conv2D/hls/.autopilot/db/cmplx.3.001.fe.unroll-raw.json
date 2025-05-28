@@ -1,0 +1,17 @@
+{
+  "0": {
+    "basicblocks": 16,
+    "calls": "",
+    "file": "axil_conv2D.cpp",
+    "fileloc": 12,
+    "instructions": 98,
+    "loads": {
+      "T": 6
+    },
+    "name": "axil_conv2D",
+    "stores": {
+      "T": 1
+    },
+    "total_instructions": 98
+  }
+}

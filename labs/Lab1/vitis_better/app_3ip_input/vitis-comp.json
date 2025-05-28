@@ -1,0 +1,15 @@
+{
+  "name": "app_3ip_input",
+  "type": "HOST",
+  "platform": "/home/ares/Desktop/CO-Proj/Labs/Lab1/vitis_better/platform_3ip_input/export/platform_3ip_input/platform_3ip_input.xpfm",
+  "domain": "standalone_ps7_cortexa9_0",
+  "cpuInstance": "ps7_cortexa9_0",
+  "cpuType": "cortex-a9",
+  "os": "standalone",
+  "configuration": {
+    "componentType": "HOST",
+    "hostToolchainConfigurations": []
+  },
+  "domainRealName": "standalone_ps7_cortexa9_0",
+  "applicationFlow": "EMBEDDED"
+}

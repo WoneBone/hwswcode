@@ -1,0 +1,3 @@
+relativeroot=/home/ares/Desktop/CO-Proj/Labs/Lab1/vitis_better/3ip_conv_hls
+original_argv=--mode hls --cosim --config /home/ares/Desktop/CO-Proj/Labs/Lab1/vitis_better/3ip_conv_hls/hls_config.cfg --work_dir axil_conv2D 
+

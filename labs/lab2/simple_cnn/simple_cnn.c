@@ -250,6 +250,7 @@ void forward_connected_layer() {
              (float *) matConnB);
 }
 
+
 int forward_softmax_layer() {
     int best = 0;
     float sum = 0;

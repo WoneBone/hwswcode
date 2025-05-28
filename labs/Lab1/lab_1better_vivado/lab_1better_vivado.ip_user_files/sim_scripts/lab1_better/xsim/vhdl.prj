@@ -1,0 +1,15 @@
+vhdl xil_defaultlib  \
+"../../../../lab_1better_vivado.gen/sources_1/bd/lab1_better/ipshared/e23c/hdl/vhdl/axil_conv2D_ama_addmuladd_2ns_7ns_7ns_7ns_13_4_1.vhd" \
+"../../../../lab_1better_vivado.gen/sources_1/bd/lab1_better/ipshared/e23c/hdl/vhdl/axil_conv2D_BUS1_s_axi.vhd" \
+"../../../../lab_1better_vivado.gen/sources_1/bd/lab1_better/ipshared/e23c/hdl/vhdl/axil_conv2D_flow_control_loop_delay_pipe.vhd" \
+"../../../../lab_1better_vivado.gen/sources_1/bd/lab1_better/ipshared/e23c/hdl/vhdl/axil_conv2D_mac_muladd_7ns_7ns_7ns_13_4_1.vhd" \
+"../../../../lab_1better_vivado.gen/sources_1/bd/lab1_better/ipshared/e23c/hdl/vhdl/axil_conv2D_mac_muladd_8ns_8s_16s_17_4_1.vhd" \
+"../../../../lab_1better_vivado.gen/sources_1/bd/lab1_better/ipshared/e23c/hdl/vhdl/axil_conv2D_mac_muladd_8ns_8s_17s_18_4_1.vhd" \
+"../../../../lab_1better_vivado.gen/sources_1/bd/lab1_better/ipshared/e23c/hdl/vhdl/axil_conv2D_mul_8ns_8s_16_1_1.vhd" \
+"../../../../lab_1better_vivado.gen/sources_1/bd/lab1_better/ipshared/e23c/hdl/vhdl/axil_conv2D.vhd" \
+"../../../bd/lab1_better/ip/lab1_better_axil_conv2D_0_0/sim/lab1_better_axil_conv2D_0_0.vhd" \
+"../../../bd/lab1_better/ip/lab1_better_rst_ps7_0_100M_0/sim/lab1_better_rst_ps7_0_100M_0.vhd" \
+"../../../bd/lab1_better/sim/lab1_better.vhd" \
+
+# Do not sort compile order
+nosort

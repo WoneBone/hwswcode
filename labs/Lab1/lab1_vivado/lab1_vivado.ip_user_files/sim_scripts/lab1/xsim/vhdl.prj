@@ -1,0 +1,15 @@
+vhdl xil_defaultlib  \
+"../../../../lab1_vivado.gen/sources_1/bd/lab1/ipshared/c48e/hdl/vhdl/axil_conv2D_ama_addmuladd_2ns_7ns_7ns_7ns_13_4_1.vhd" \
+"../../../../lab1_vivado.gen/sources_1/bd/lab1/ipshared/c48e/hdl/vhdl/axil_conv2D_BUS1_s_axi.vhd" \
+"../../../../lab1_vivado.gen/sources_1/bd/lab1/ipshared/c48e/hdl/vhdl/axil_conv2D_flow_control_loop_delay_pipe.vhd" \
+"../../../../lab1_vivado.gen/sources_1/bd/lab1/ipshared/c48e/hdl/vhdl/axil_conv2D_mac_muladd_7ns_7ns_7ns_13_4_1.vhd" \
+"../../../../lab1_vivado.gen/sources_1/bd/lab1/ipshared/c48e/hdl/vhdl/axil_conv2D_mac_muladd_8ns_8s_16s_17_4_1.vhd" \
+"../../../../lab1_vivado.gen/sources_1/bd/lab1/ipshared/c48e/hdl/vhdl/axil_conv2D_mac_muladd_8ns_8s_17s_18_4_1.vhd" \
+"../../../../lab1_vivado.gen/sources_1/bd/lab1/ipshared/c48e/hdl/vhdl/axil_conv2D_mul_8ns_8s_16_1_1.vhd" \
+"../../../../lab1_vivado.gen/sources_1/bd/lab1/ipshared/c48e/hdl/vhdl/axil_conv2D.vhd" \
+"../../../bd/lab1/ip/lab1_axil_conv2D_0_0/sim/lab1_axil_conv2D_0_0.vhd" \
+"../../../bd/lab1/ip/lab1_rst_ps7_0_100M_0/sim/lab1_rst_ps7_0_100M_0.vhd" \
+"../../../bd/lab1/sim/lab1.vhd" \
+
+# Do not sort compile order
+nosort

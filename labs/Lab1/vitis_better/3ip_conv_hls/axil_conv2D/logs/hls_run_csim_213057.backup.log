@@ -1,0 +1,60 @@
+INFO: [vitis-run 60-1548] Creating build summary session with primary output /home/ares/Desktop/CO-Proj/Labs/Lab1/vitis_better/3ip_conv_hls/axil_conv2D/axil_conv2D.hlsrun_csim_summary, at Wed May 21 15:26:36 2025
+INFO: [vitis-run 82-31] Launching vitis_hls: vitis_hls -nolog -run csim -work_dir /home/ares/Desktop/CO-Proj/Labs/Lab1/vitis_better/3ip_conv_hls/axil_conv2D -config /home/ares/Desktop/CO-Proj/Labs/Lab1/vitis_better/3ip_conv_hls/hls_config.cfg -cmdlineconfig /home/ares/Desktop/CO-Proj/Labs/Lab1/vitis_better/3ip_conv_hls/axil_conv2D/hls/config.cmdline
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2024.1.2 (64-bit)
+  **** SW Build 5096458 on Sep  5 2024
+  **** IP Build 5164407 on Fri Sep  6 08:18:11 MDT 2024
+  **** SharedData Build 5164864 on Thu Sep 05 13:09:09 MDT 2024
+  **** Start of session at: Wed May 21 15:26:39 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source /home/ares/tools/Xilinx/Vitis_HLS/2024.1/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] For user 'ares' on host 'ares' (Linux_x86_64 version 5.15.0-139-generic) on Wed May 21 15:26:42 WEST 2025
+INFO: [HLS 200-10] On os Linux Mint 21.2
+INFO: [HLS 200-10] In directory '/home/ares/Desktop/CO-Proj/Labs/Lab1/vitis_better/3ip_conv_hls'
+INFO: [HLS 200-2005] Using work_dir /home/ares/Desktop/CO-Proj/Labs/Lab1/vitis_better/3ip_conv_hls/axil_conv2D 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'syn.file=/home/ares/Desktop/CO-Proj/Labs/Lab1/lab1_files/hls/axil_conv2D.cpp' from /home/ares/Desktop/CO-Proj/Labs/Lab1/vitis_better/3ip_conv_hls/hls_config.cfg(8)
+INFO: [HLS 200-10] Adding design file '/home/ares/Desktop/CO-Proj/Labs/Lab1/lab1_files/hls/axil_conv2D.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/home/ares/Desktop/CO-Proj/Labs/Lab1/lab1_files/hls/axil_conv2D.h' from /home/ares/Desktop/CO-Proj/Labs/Lab1/vitis_better/3ip_conv_hls/hls_config.cfg(9)
+INFO: [HLS 200-10] Adding design file '/home/ares/Desktop/CO-Proj/Labs/Lab1/lab1_files/hls/axil_conv2D.h' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=/home/ares/Desktop/CO-Proj/Labs/Lab1/lab1_files/hls/tb_axil_conv2D.cpp' from /home/ares/Desktop/CO-Proj/Labs/Lab1/vitis_better/3ip_conv_hls/hls_config.cfg(10)
+INFO: [HLS 200-10] Adding test bench file '/home/ares/Desktop/CO-Proj/Labs/Lab1/lab1_files/hls/tb_axil_conv2D.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.top=axil_conv2D' from /home/ares/Desktop/CO-Proj/Labs/Lab1/vitis_better/3ip_conv_hls/hls_config.cfg(7)
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from /home/ares/Desktop/CO-Proj/Labs/Lab1/vitis_better/3ip_conv_hls/hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'part=xc7z010clg400-1' from /home/ares/Desktop/CO-Proj/Labs/Lab1/vitis_better/3ip_conv_hls/hls_config.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xc7z010-clg400-1'
+INFO: [HLS 200-1465] Applying ini 'clock=10ns' from /home/ares/Desktop/CO-Proj/Labs/Lab1/vitis_better/3ip_conv_hls/hls_config.cfg(11)
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1465] Applying ini 'clock_uncertainty=27%' from /home/ares/Desktop/CO-Proj/Labs/Lab1/vitis_better/3ip_conv_hls/hls_config.cfg(12)
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 2.7ns.
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from /home/ares/Desktop/CO-Proj/Labs/Lab1/vitis_better/3ip_conv_hls/hls_config.cfg(5)
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+   Compiling ../../../../../../lab1_files/hls/tb_axil_conv2D.cpp in debug mode
+   Generating csim.exe
+Input Image
+100 101 102 103 104 105 106 107 
+100 101 102 103 104 105 106 107 
+100 101 102 103 104 105 106 107 
+100 101 102 103 104 105 106 107 
+100 101 102 103 104 105 106 107 
+100 101 102 103 104 105 106 107 
+100 101 102 103 104 105 106 107 
+100 101 102 103 104 105 106 107 
+Output Image
+ 101  102  103  104  105  106 
+ 101  102  103  104  105  106 
+ 101  102  103  104  105  106 
+ 101  102  103  104  105  106 
+ 101  102  103  104  105  106 
+ 101  102  103  104  105  106 
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-112] Total CPU user time: 7.88 seconds. Total CPU system time: 0.71 seconds. Total elapsed time: 8.28 seconds; peak allocated memory: 257.383 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 13s

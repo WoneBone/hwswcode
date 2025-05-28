@@ -1,0 +1,8 @@
+verilog xil_defaultlib --include "/home/ares/tools/Xilinx/Vivado/2024.1/data/xilinx_vip/include" --include "../../../../lab_1better_vivado.gen/sources_1/bd/lab1_better/ipshared/ec67/hdl" --include "../../../../lab_1better_vivado.gen/sources_1/bd/lab1_better/ipshared/d47c/hdl" --include "../../../../lab_1better_vivado.gen/sources_1/bd/lab1_better/ip/lab1_better_axil_conv2D_0_0/drivers/axil_conv2D_v1_0/src" \
+"../../../bd/lab1_better/ip/lab1_better_processing_system7_0_0/sim/lab1_better_processing_system7_0_0.v" \
+"../../../bd/lab1_better/ip/lab1_better_auto_pc_0/sim/lab1_better_auto_pc_0.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

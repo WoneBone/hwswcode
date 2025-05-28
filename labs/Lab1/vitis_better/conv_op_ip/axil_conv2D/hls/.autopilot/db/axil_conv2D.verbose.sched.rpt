@@ -1,0 +1,251 @@
+
+
+================================================================
+== Vitis HLS Report for 'axil_conv2D'
+================================================================
+* Date:           Wed May 21 15:43:58 2025
+
+* Version:        2024.1.2 (Build 5096458 on Sep  5 2024)
+* Project:        axil_conv2D
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z010-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.769 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+--------+--------+---------+
+    |  Latency (cycles) |  Latency (absolute) |     Interval    | Pipeline|
+    |   min   |   max   |    min   |    max   |   min  |   max  |   Type  |
+    +---------+---------+----------+----------+--------+--------+---------+
+    |   179529|   179529|  1.795 ms|  1.795 ms|  179530|  179530|       no|
+    +---------+---------+----------+----------+--------+--------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------+---------+---------+----------+-----------+-----------+------+----------+
+        |           |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- loop_i   |   177676|   177676|      2066|          -|          -|    86|        no|
+        | + loop_j  |     2064|     2064|        24|          -|          -|    86|        no|
+        +-----------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 8
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 3 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 4 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.58>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%phi_mul = alloca i32 1"   --->   Operation 9 'alloca' 'phi_mul' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%i = alloca i32 1" [../../lab1_files/hls/axil_conv2D.cpp:28]   --->   Operation 10 'alloca' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%acc_1_loc = alloca i64 1"   --->   Operation 11 'alloca' 'acc_1_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [2/2] (0.00ns)   --->   "%call_ln0 = call void @axil_conv2D_Pipeline_loop_m, i32 %image_out"   --->   Operation 12 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 13 [1/1] (1.58ns)   --->   "%store_ln28 = store i7 0, i7 %i" [../../lab1_files/hls/axil_conv2D.cpp:28]   --->   Operation 13 'store' 'store_ln28' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 14 [1/1] (1.58ns)   --->   "%store_ln0 = store i13 0, i13 %phi_mul"   --->   Operation 14 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+
+State 2 <SV = 1> <Delay = 4.81>
+ST_2 : Operation 15 [1/1] (1.00ns)   --->   "%bias_read = read i32 @_ssdm_op_Read.s_axilite.i32, i32 %bias"   --->   Operation 15 'read' 'bias_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 112 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%spectopmodule_ln12 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_7" [../../lab1_files/hls/axil_conv2D.cpp:12]   --->   Operation 16 'spectopmodule' 'spectopmodule_ln12' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %image_in, void @empty, i32 0, i32 0, void @empty_12, i32 0, i32 0, void @empty_0, void @empty_1, void @empty_12, i32 0, i32 0, i32 0, i32 0, void @empty_12, void @empty_12, i32 4294967295, i32 0, i32 0"   --->   Operation 17 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %image_in, void @empty_2, i32 0, i32 0, void @empty_12, i32 1, i32 0, void @empty_12, void @empty_12, void @empty_12, i32 0, i32 0, i32 0, i32 0, void @empty_12, void @empty_12, i32 4294967295, i32 0, i32 0"   --->   Operation 18 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %image_in, i64 666, i64 207, i64 1"   --->   Operation 19 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %image_in"   --->   Operation 20 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %image_out, void @empty, i32 0, i32 0, void @empty_12, i32 0, i32 0, void @empty_0, void @empty_3, void @empty_12, i32 0, i32 0, i32 0, i32 0, void @empty_12, void @empty_12, i32 4294967295, i32 0, i32 0"   --->   Operation 21 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %image_out, void @empty_2, i32 0, i32 0, void @empty_12, i32 1, i32 0, void @empty_12, void @empty_12, void @empty_12, i32 0, i32 0, i32 0, i32 0, void @empty_12, void @empty_12, i32 4294967295, i32 0, i32 0"   --->   Operation 22 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %image_out, i64 666, i64 207, i64 1"   --->   Operation 23 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %image_out"   --->   Operation 24 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %weights, void @empty, i32 0, i32 0, void @empty_12, i32 0, i32 0, void @empty_0, void @empty_4, void @empty_12, i32 0, i32 0, i32 0, i32 0, void @empty_12, void @empty_12, i32 4294967295, i32 0, i32 0"   --->   Operation 25 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %weights, void @empty_2, i32 0, i32 0, void @empty_12, i32 1, i32 0, void @empty_12, void @empty_12, void @empty_12, i32 0, i32 0, i32 0, i32 0, void @empty_12, void @empty_12, i32 4294967295, i32 0, i32 0"   --->   Operation 26 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i8 %weights, i64 666, i64 207, i64 1"   --->   Operation 27 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i8 %weights"   --->   Operation 28 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 29 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %bias"   --->   Operation 29 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 30 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %bias, void @empty, i32 4294967295, i32 4294967295, void @empty_13, i32 0, i32 0, void @empty_0, void @empty_5, void @empty_12, i32 0, i32 0, i32 0, i32 0, void @empty_12, void @empty_12, i32 4294967295, i32 0, i32 0"   --->   Operation 30 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 31 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %bias, void @empty_6, i32 4294967295, i32 4294967295, void @empty_12, i32 0, i32 0, void @empty_12, void @empty_12, void @empty_12, i32 0, i32 0, i32 0, i32 0, void @empty_12, void @empty_12, i32 4294967295, i32 0, i32 0"   --->   Operation 31 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 32 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty, i32 0, i32 0, void @empty_12, i32 0, i32 0, void @empty_0, void @empty_12, void @empty_12, i32 0, i32 0, i32 0, i32 0, void @empty_12, void @empty_12, i32 4294967295, i32 0, i32 0"   --->   Operation 32 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 33 [1/2] (4.81ns)   --->   "%call_ln0 = call void @axil_conv2D_Pipeline_loop_m, i32 %image_out"   --->   Operation 33 'call' 'call_ln0' <Predicate = true> <Delay = 4.81> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 34 [1/1] (0.00ns)   --->   "%acc = trunc i32 %bias_read"   --->   Operation 34 'trunc' 'acc' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 35 [1/1] (0.00ns)   --->   "%br_ln28 = br void %loop_j" [../../lab1_files/hls/axil_conv2D.cpp:28]   --->   Operation 35 'br' 'br_ln28' <Predicate = true> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 3.45>
+ST_3 : Operation 36 [1/1] (0.00ns)   --->   "%phi_mul_load = load i13 %phi_mul" [../../lab1_files/hls/axil_conv2D.cpp:56]   --->   Operation 36 'load' 'phi_mul_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 37 [1/1] (0.00ns)   --->   "%i_1 = load i7 %i" [../../lab1_files/hls/axil_conv2D.cpp:28]   --->   Operation 37 'load' 'i_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 38 [1/1] (1.67ns)   --->   "%add_ln28 = add i13 %phi_mul_load, i13 86" [../../lab1_files/hls/axil_conv2D.cpp:28]   --->   Operation 38 'add' 'add_ln28' <Predicate = true> <Delay = 1.67> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 39 [1/1] (1.87ns)   --->   "%icmp_ln28 = icmp_eq  i7 %i_1, i7 86" [../../lab1_files/hls/axil_conv2D.cpp:28]   --->   Operation 39 'icmp' 'icmp_ln28' <Predicate = true> <Delay = 1.87> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.87> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 40 [1/1] (1.87ns)   --->   "%i_2 = add i7 %i_1, i7 1" [../../lab1_files/hls/axil_conv2D.cpp:28]   --->   Operation 40 'add' 'i_2' <Predicate = true> <Delay = 1.87> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.87> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 41 [1/1] (0.00ns)   --->   "%br_ln28 = br i1 %icmp_ln28, void %loop_j.split, void %for.end68" [../../lab1_files/hls/axil_conv2D.cpp:28]   --->   Operation 41 'br' 'br_ln28' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 42 [1/1] (0.00ns)   --->   "%speclooptripcount_ln28 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 86, i64 86, i64 86" [../../lab1_files/hls/axil_conv2D.cpp:28]   --->   Operation 42 'speclooptripcount' 'speclooptripcount_ln28' <Predicate = (!icmp_ln28)> <Delay = 0.00>
+ST_3 : Operation 43 [1/1] (0.00ns)   --->   "%specloopname_ln28 = specloopname void @_ssdm_op_SpecLoopName, void @empty_10" [../../lab1_files/hls/axil_conv2D.cpp:28]   --->   Operation 43 'specloopname' 'specloopname_ln28' <Predicate = (!icmp_ln28)> <Delay = 0.00>
+ST_3 : Operation 44 [1/1] (0.00ns)   --->   "%trunc_ln56 = trunc i13 %phi_mul_load" [../../lab1_files/hls/axil_conv2D.cpp:56]   --->   Operation 44 'trunc' 'trunc_ln56' <Predicate = (!icmp_ln28)> <Delay = 0.00>
+ST_3 : Operation 45 [1/1] (1.58ns)   --->   "%br_ln30 = br void %loop_k" [../../lab1_files/hls/axil_conv2D.cpp:30]   --->   Operation 45 'br' 'br_ln30' <Predicate = (!icmp_ln28)> <Delay = 1.58>
+ST_3 : Operation 46 [1/1] (0.00ns)   --->   "%ret_ln62 = ret" [../../lab1_files/hls/axil_conv2D.cpp:62]   --->   Operation 46 'ret' 'ret_ln62' <Predicate = (icmp_ln28)> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 4.57>
+ST_4 : Operation 47 [1/1] (0.00ns)   --->   "%j = phi i7 0, void %loop_j.split, i7 %j_1, void %loop_k.split"   --->   Operation 47 'phi' 'j' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 48 [1/1] (1.87ns)   --->   "%icmp_ln30 = icmp_eq  i7 %j, i7 86" [../../lab1_files/hls/axil_conv2D.cpp:30]   --->   Operation 48 'icmp' 'icmp_ln30' <Predicate = true> <Delay = 1.87> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.87> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 49 [1/1] (1.87ns)   --->   "%j_1 = add i7 %j, i7 1" [../../lab1_files/hls/axil_conv2D.cpp:30]   --->   Operation 49 'add' 'j_1' <Predicate = true> <Delay = 1.87> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.87> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 50 [1/1] (0.00ns)   --->   "%br_ln30 = br i1 %icmp_ln30, void %loop_k.split, void %for.inc66" [../../lab1_files/hls/axil_conv2D.cpp:30]   --->   Operation 50 'br' 'br_ln30' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 51 [1/1] (0.00ns)   --->   "%zext_ln30 = zext i7 %j" [../../lab1_files/hls/axil_conv2D.cpp:30]   --->   Operation 51 'zext' 'zext_ln30' <Predicate = (!icmp_ln30)> <Delay = 0.00>
+ST_4 : Operation 52 [2/2] (2.70ns)   --->   "%call_ln28 = call void @axil_conv2D_Pipeline_loop_k, i21 %acc, i7 %i_1, i7 %j, i32 %image_in, i8 %weights, i21 %acc_1_loc" [../../lab1_files/hls/axil_conv2D.cpp:28]   --->   Operation 52 'call' 'call_ln28' <Predicate = (!icmp_ln30)> <Delay = 2.70> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 53 [1/1] (0.00ns)   --->   "%trunc_ln56_1 = trunc i7 %j" [../../lab1_files/hls/axil_conv2D.cpp:56]   --->   Operation 53 'trunc' 'trunc_ln56_1' <Predicate = (!icmp_ln30)> <Delay = 0.00>
+ST_4 : Operation 54 [1/1] (1.56ns)   --->   "%add_ln56 = add i2 %trunc_ln56, i2 %trunc_ln56_1" [../../lab1_files/hls/axil_conv2D.cpp:56]   --->   Operation 54 'add' 'add_ln56' <Predicate = (!icmp_ln30)> <Delay = 1.56> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.56> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 55 [1/1] (1.67ns)   --->   "%add_ln56_1 = add i13 %phi_mul_load, i13 %zext_ln30" [../../lab1_files/hls/axil_conv2D.cpp:56]   --->   Operation 55 'add' 'add_ln56_1' <Predicate = (!icmp_ln30)> <Delay = 1.67> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 56 [1/1] (0.00ns)   --->   "%lshr_ln = partselect i11 @_ssdm_op_PartSelect.i11.i13.i32.i32, i13 %add_ln56_1, i32 2, i32 12" [../../lab1_files/hls/axil_conv2D.cpp:56]   --->   Operation 56 'partselect' 'lshr_ln' <Predicate = (!icmp_ln30)> <Delay = 0.00>
+ST_4 : Operation 57 [1/1] (1.58ns)   --->   "%store_ln28 = store i7 %i_2, i7 %i" [../../lab1_files/hls/axil_conv2D.cpp:28]   --->   Operation 57 'store' 'store_ln28' <Predicate = (icmp_ln30)> <Delay = 1.58>
+ST_4 : Operation 58 [1/1] (1.58ns)   --->   "%store_ln28 = store i13 %add_ln28, i13 %phi_mul" [../../lab1_files/hls/axil_conv2D.cpp:28]   --->   Operation 58 'store' 'store_ln28' <Predicate = (icmp_ln30)> <Delay = 1.58>
+ST_4 : Operation 59 [1/1] (0.00ns)   --->   "%br_ln28 = br void %loop_j" [../../lab1_files/hls/axil_conv2D.cpp:28]   --->   Operation 59 'br' 'br_ln28' <Predicate = (icmp_ln30)> <Delay = 0.00>
+
+State 5 <SV = 4> <Delay = 3.25>
+ST_5 : Operation 60 [1/2] (0.00ns)   --->   "%call_ln28 = call void @axil_conv2D_Pipeline_loop_k, i21 %acc, i7 %i_1, i7 %j, i32 %image_in, i8 %weights, i21 %acc_1_loc" [../../lab1_files/hls/axil_conv2D.cpp:28]   --->   Operation 60 'call' 'call_ln28' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 61 [1/1] (0.00ns)   --->   "%zext_ln56_1 = zext i11 %lshr_ln" [../../lab1_files/hls/axil_conv2D.cpp:56]   --->   Operation 61 'zext' 'zext_ln56_1' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 62 [1/1] (0.00ns)   --->   "%image_out_addr = getelementptr i32 %image_out, i64 0, i64 %zext_ln56_1" [../../lab1_files/hls/axil_conv2D.cpp:56]   --->   Operation 62 'getelementptr' 'image_out_addr' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 63 [2/2] (3.25ns)   --->   "%image_out_load = load i11 %image_out_addr" [../../lab1_files/hls/axil_conv2D.cpp:56]   --->   Operation 63 'load' 'image_out_load' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM_1P">   --->   Core 85 'RAM_1P' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 1849> <RAM>
+
+State 6 <SV = 5> <Delay = 6.76>
+ST_6 : Operation 64 [1/1] (0.00ns)   --->   "%acc_1_loc_load = load i21 %acc_1_loc"   --->   Operation 64 'load' 'acc_1_loc_load' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 65 [1/1] (0.00ns)   --->   "%tmp = partselect i13 @_ssdm_op_PartSelect.i13.i21.i32.i32, i21 %acc_1_loc_load, i32 8, i32 20" [../../lab1_files/hls/axil_conv2D.cpp:49]   --->   Operation 65 'partselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 66 [1/1] (1.67ns)   --->   "%icmp_ln49 = icmp_sgt  i13 %tmp, i13 0" [../../lab1_files/hls/axil_conv2D.cpp:49]   --->   Operation 66 'icmp' 'icmp_ln49' <Predicate = true> <Delay = 1.67> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.67> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 67 [1/1] (0.00ns) (grouped into LUT with out node shl_ln56)   --->   "%tmp_1 = bitselect i1 @_ssdm_op_BitSelect.i1.i21.i32, i21 %acc_1_loc_load, i32 20" [../../lab1_files/hls/axil_conv2D.cpp:51]   --->   Operation 67 'bitselect' 'tmp_1' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 68 [1/1] (0.00ns) (grouped into LUT with out node shl_ln56)   --->   "%trunc_ln32 = trunc i21 %acc_1_loc_load" [../../lab1_files/hls/axil_conv2D.cpp:32]   --->   Operation 68 'trunc' 'trunc_ln32' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 69 [1/1] (0.00ns) (grouped into LUT with out node shl_ln56)   --->   "%acc_sat_2_cast_cast = select i1 %icmp_ln49, i20 255, i20 0" [../../lab1_files/hls/axil_conv2D.cpp:49]   --->   Operation 69 'select' 'acc_sat_2_cast_cast' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_6 : Operation 70 [1/1] (0.00ns) (grouped into LUT with out node shl_ln56)   --->   "%empty = or i1 %icmp_ln49, i1 %tmp_1" [../../lab1_files/hls/axil_conv2D.cpp:49]   --->   Operation 70 'or' 'empty' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 71 [1/1] (0.00ns) (grouped into LUT with out node shl_ln56)   --->   "%acc_sat = select i1 %empty, i20 %acc_sat_2_cast_cast, i20 %trunc_ln32" [../../lab1_files/hls/axil_conv2D.cpp:49]   --->   Operation 71 'select' 'acc_sat' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_6 : Operation 72 [1/1] (0.00ns) (grouped into LUT with out node shl_ln56)   --->   "%zext_ln32 = zext i20 %acc_sat" [../../lab1_files/hls/axil_conv2D.cpp:32]   --->   Operation 72 'zext' 'zext_ln32' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 73 [1/1] (0.00ns) (grouped into LUT with out node shl_ln56)   --->   "%shl_ln = bitconcatenate i5 @_ssdm_op_BitConcatenate.i5.i2.i3, i2 %add_ln56, i3 0" [../../lab1_files/hls/axil_conv2D.cpp:56]   --->   Operation 73 'bitconcatenate' 'shl_ln' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 74 [1/1] (0.00ns) (grouped into LUT with out node shl_ln56)   --->   "%zext_ln56 = zext i5 %shl_ln" [../../lab1_files/hls/axil_conv2D.cpp:56]   --->   Operation 74 'zext' 'zext_ln56' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 75 [1/1] (4.09ns) (out node of the LUT)   --->   "%shl_ln56 = shl i32 %zext_ln32, i32 %zext_ln56" [../../lab1_files/hls/axil_conv2D.cpp:56]   --->   Operation 75 'shl' 'shl_ln56' <Predicate = true> <Delay = 4.09> <CoreInst = "Shifter">   --->   Core 75 'Shifter' <Latency = 0> <II = 1> <Delay = 4.09> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 76 [1/2] (3.25ns)   --->   "%image_out_load = load i11 %image_out_addr" [../../lab1_files/hls/axil_conv2D.cpp:56]   --->   Operation 76 'load' 'image_out_load' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM_1P">   --->   Core 85 'RAM_1P' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 1849> <RAM>
+ST_6 : Operation 77 [1/1] (0.99ns)   --->   "%or_ln56 = or i32 %image_out_load, i32 %shl_ln56" [../../lab1_files/hls/axil_conv2D.cpp:56]   --->   Operation 77 'or' 'or_ln56' <Predicate = true> <Delay = 0.99> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 3.25>
+ST_7 : Operation 78 [2/2] (3.25ns)   --->   "%store_ln56 = store i32 %or_ln56, i11 %image_out_addr" [../../lab1_files/hls/axil_conv2D.cpp:56]   --->   Operation 78 'store' 'store_ln56' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM_1P">   --->   Core 85 'RAM_1P' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 1849> <RAM>
+
+State 8 <SV = 7> <Delay = 3.25>
+ST_8 : Operation 79 [1/1] (0.00ns)   --->   "%speclooptripcount_ln31 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 86, i64 86, i64 86" [../../lab1_files/hls/axil_conv2D.cpp:31]   --->   Operation 79 'speclooptripcount' 'speclooptripcount_ln31' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 80 [1/1] (0.00ns)   --->   "%specloopname_ln30 = specloopname void @_ssdm_op_SpecLoopName, void @empty_9" [../../lab1_files/hls/axil_conv2D.cpp:30]   --->   Operation 80 'specloopname' 'specloopname_ln30' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 81 [1/2] (3.25ns)   --->   "%store_ln56 = store i32 %or_ln56, i11 %image_out_addr" [../../lab1_files/hls/axil_conv2D.cpp:56]   --->   Operation 81 'store' 'store_ln56' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM_1P">   --->   Core 85 'RAM_1P' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 1849> <RAM>
+ST_8 : Operation 82 [1/1] (0.00ns)   --->   "%br_ln30 = br void %loop_k" [../../lab1_files/hls/axil_conv2D.cpp:30]   --->   Operation 82 'br' 'br_ln30' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 1.588ns
+The critical path consists of the following:
+	'alloca' operation 7 bit ('i', ../../lab1_files/hls/axil_conv2D.cpp:28) [6]  (0.000 ns)
+	'store' operation 0 bit ('store_ln28', ../../lab1_files/hls/axil_conv2D.cpp:28) of constant 0 on local variable 'i', ../../lab1_files/hls/axil_conv2D.cpp:28 [28]  (1.588 ns)
+
+ <State 2>: 4.815ns
+The critical path consists of the following:
+	'call' operation 0 bit ('call_ln0') to 'axil_conv2D_Pipeline_loop_m' [26]  (4.815 ns)
+
+ <State 3>: 3.458ns
+The critical path consists of the following:
+	'load' operation 7 bit ('i', ../../lab1_files/hls/axil_conv2D.cpp:28) on local variable 'i', ../../lab1_files/hls/axil_conv2D.cpp:28 [33]  (0.000 ns)
+	'icmp' operation 1 bit ('icmp_ln28', ../../lab1_files/hls/axil_conv2D.cpp:28) [35]  (1.870 ns)
+	blocking operation 1.588 ns on control path)
+
+ <State 4>: 4.570ns
+The critical path consists of the following:
+	'phi' operation 7 bit ('j') with incoming values : ('j', ../../lab1_files/hls/axil_conv2D.cpp:30) [44]  (0.000 ns)
+	'icmp' operation 1 bit ('icmp_ln30', ../../lab1_files/hls/axil_conv2D.cpp:30) [45]  (1.870 ns)
+	'call' operation 0 bit ('call_ln28', ../../lab1_files/hls/axil_conv2D.cpp:28) to 'axil_conv2D_Pipeline_loop_k' [52]  (2.700 ns)
+
+ <State 5>: 3.254ns
+The critical path consists of the following:
+	'getelementptr' operation 11 bit ('image_out_addr', ../../lab1_files/hls/axil_conv2D.cpp:56) [70]  (0.000 ns)
+	'load' operation 32 bit ('image_out_load', ../../lab1_files/hls/axil_conv2D.cpp:56) on array 'image_out' [71]  (3.254 ns)
+
+ <State 6>: 6.769ns
+The critical path consists of the following:
+	'load' operation 21 bit ('acc_1_loc_load') on local variable 'acc_1_loc' [53]  (0.000 ns)
+	'icmp' operation 1 bit ('icmp_ln49', ../../lab1_files/hls/axil_conv2D.cpp:49) [55]  (1.679 ns)
+	'select' operation 20 bit ('acc_sat_2_cast_cast', ../../lab1_files/hls/axil_conv2D.cpp:49) [58]  (0.000 ns)
+	'select' operation 20 bit ('acc_sat', ../../lab1_files/hls/axil_conv2D.cpp:49) [60]  (0.000 ns)
+	'shl' operation 32 bit ('shl_ln56', ../../lab1_files/hls/axil_conv2D.cpp:56) [66]  (4.096 ns)
+	'or' operation 32 bit ('or_ln56', ../../lab1_files/hls/axil_conv2D.cpp:56) [72]  (0.993 ns)
+
+ <State 7>: 3.254ns
+The critical path consists of the following:
+	'store' operation 0 bit ('store_ln56', ../../lab1_files/hls/axil_conv2D.cpp:56) of variable 'or_ln56', ../../lab1_files/hls/axil_conv2D.cpp:56 on array 'image_out' [73]  (3.254 ns)
+
+ <State 8>: 3.254ns
+The critical path consists of the following:
+	'store' operation 0 bit ('store_ln56', ../../lab1_files/hls/axil_conv2D.cpp:56) of variable 'or_ln56', ../../lab1_files/hls/axil_conv2D.cpp:56 on array 'image_out' [73]  (3.254 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

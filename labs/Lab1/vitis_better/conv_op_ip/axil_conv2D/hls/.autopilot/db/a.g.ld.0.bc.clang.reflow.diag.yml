@@ -1,0 +1,74 @@
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ../../lab1_files/hls/axil_conv2D.cpp, Line: 42, 
+                   Column: 17 }
+Function:        _Z11axil_conv2DP7ap_uintILi32EES1_P6ap_intILi8EES2_ILi32EE
+Args:            
+  - String:          'Loop '''
+  - LoopName:        loop_x
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../../lab1_files/hls/axil_conv2D.cpp, Line: 15, 
+                   Column: 0 }
+Function:        _Z11axil_conv2DP7ap_uintILi32EES1_P6ap_intILi8EES2_ILi32EE
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        loop_x
+  - String:          ''' ('
+  - LoopLoc:         '../../lab1_files/hls/axil_conv2D.cpp:42:17'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          axil_conv2D
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        loop_m
+  - String:          '> at '
+  - LoopLoc:         '../../lab1_files/hls/axil_conv2D.cpp:24:5'
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-loop-flatten-cost-model
+Name:            FlattenOffInference
+DebugLoc:        { File: ../../lab1_files/hls/axil_conv2D.cpp, Line: 30, 
+                   Column: 9 }
+Function:        _Z11axil_conv2DP7ap_uintILi32EES1_P6ap_intILi8EES2_ILi32EE
+Args:            
+  - String:          'Automatically disabling loop flattening for loop '''
+  - LoopName:        loop_j
+  - String:          '''.'
+...
+--- !Passed
+Pass:            reflow-loop-flatten-cost-model
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: ../../lab1_files/hls/axil_conv2D.cpp, Line: 30, 
+                   Column: 9 }
+Function:        _Z11axil_conv2DP7ap_uintILi32EES1_P6ap_intILi8EES2_ILi32EE
+Args:            
+  - PragmaType:      loop_flatten
+  - String:          ' '
+  - PragmaOptions:   off
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  axil_conv2D
+  - String:          ' '
+  - PragmaSrcLoc:    '../../lab1_files/hls/axil_conv2D.cpp:30:9'
+    DebugLoc:        { File: ../../lab1_files/hls/axil_conv2D.cpp, Line: 30, 
+                       Column: 9 }
+  - LoopName:        loop_j
+  - String:          ' '
+  - LoopLoc:         '../../lab1_files/hls/axil_conv2D.cpp:30:9'
+    DebugLoc:        { File: ../../lab1_files/hls/axil_conv2D.cpp, Line: 30, 
+                       Column: 9 }
+  - String:          ' '
+...

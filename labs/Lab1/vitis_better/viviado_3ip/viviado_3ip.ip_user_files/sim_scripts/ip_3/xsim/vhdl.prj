@@ -1,0 +1,17 @@
+vhdl xil_defaultlib  \
+"../../../../viviado_3ip.gen/sources_1/bd/ip_3/ipshared/adfa/hdl/vhdl/axil_conv2D_ama_addmuladd_2ns_7ns_7ns_7ns_13_4_1.vhd" \
+"../../../../viviado_3ip.gen/sources_1/bd/ip_3/ipshared/adfa/hdl/vhdl/axil_conv2D_axil_conv2D_Pipeline_loop_k.vhd" \
+"../../../../viviado_3ip.gen/sources_1/bd/ip_3/ipshared/adfa/hdl/vhdl/axil_conv2D_BUS1_s_axi.vhd" \
+"../../../../viviado_3ip.gen/sources_1/bd/ip_3/ipshared/adfa/hdl/vhdl/axil_conv2D_flow_control_loop_pipe_sequential_init.vhd" \
+"../../../../viviado_3ip.gen/sources_1/bd/ip_3/ipshared/adfa/hdl/vhdl/axil_conv2D_mac_muladd_8ns_8s_16s_17_4_1.vhd" \
+"../../../../viviado_3ip.gen/sources_1/bd/ip_3/ipshared/adfa/hdl/vhdl/axil_conv2D_mac_muladd_8ns_8s_17s_18_4_1.vhd" \
+"../../../../viviado_3ip.gen/sources_1/bd/ip_3/ipshared/adfa/hdl/vhdl/axil_conv2D_mul_8ns_8s_16_1_1.vhd" \
+"../../../../viviado_3ip.gen/sources_1/bd/ip_3/ipshared/adfa/hdl/vhdl/axil_conv2D.vhd" \
+"../../../bd/ip_3/ip/ip_3_axil_conv2D_0_0/sim/ip_3_axil_conv2D_0_0.vhd" \
+"../../../bd/ip_3/ip/ip_3_axil_conv2D_1_0/sim/ip_3_axil_conv2D_1_0.vhd" \
+"../../../bd/ip_3/ip/ip_3_axil_conv2D_2_0/sim/ip_3_axil_conv2D_2_0.vhd" \
+"../../../bd/ip_3/ip/ip_3_rst_ps7_0_100M_0/sim/ip_3_rst_ps7_0_100M_0.vhd" \
+"../../../bd/ip_3/sim/ip_3.vhd" \
+
+# Do not sort compile order
+nosort

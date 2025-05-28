@@ -1,0 +1,39 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch CLANG as the compiler.
+   Compiling ../../../../../../lab1_files/hls/tb_axil_conv2D.cpp in debug mode
+   Compiling ../../../../../../lab1_files/hls/axil_conv2D.cpp in debug mode
+   Generating csim.exe
+Input Image
+
+200 201 202 203 204 205 206 207 
+
+200 201 202 203 204 205 206 207 
+
+200 201 202 203 204 205 206 207 
+
+200 201 202 203 204 205 206 207 
+
+200 201 202 203 204 205 206 207 
+
+200 201 202 203 204 205 206 207 
+
+200 201 202 203 204 205 206 207 
+
+200 201 202 203 204 205 206 207 
+
+Output Image
+
+ 201  202  203  204  205  206 
+
+ 201  202  203  204  205  206 
+
+ 201  202  203  204  205  206 
+
+ 201  202  203  204  205  206 
+
+ 201  202  203  204  205  206 
+
+ 201  202  203  204  205  206 
+
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

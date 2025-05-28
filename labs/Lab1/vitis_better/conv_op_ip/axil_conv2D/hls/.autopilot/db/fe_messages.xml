@@ -1,0 +1,36 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="directive:1:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="axil_conv2D" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=axil_conv2D" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../../lab1_files/hls/axil_conv2D.cpp:17:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="axil_conv2D" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return bundle=BUS1" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../../lab1_files/hls/axil_conv2D.cpp:18:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="axil_conv2D" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=image_in bundle=BUS1" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../../lab1_files/hls/axil_conv2D.cpp:19:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="axil_conv2D" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=image_out bundle=BUS1" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../../lab1_files/hls/axil_conv2D.cpp:20:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="axil_conv2D" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=weights bundle=BUS1" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../../lab1_files/hls/axil_conv2D.cpp:21:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="axil_conv2D" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=bias bundle=BUS1" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="../../lab1_files/hls/axil_conv2D.cpp:36:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="axil_conv2D" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="../../lab1_files/hls/axil_conv2D.cpp:42:17" msg_body="Loop 'loop_x' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="loop_x"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="../../lab1_files/hls/axil_conv2D.cpp:15:0" msg_body="Unrolling loop 'loop_x' (../../lab1_files/hls/axil_conv2D.cpp:42:17) in function 'axil_conv2D' completely with a factor of 3">
+        <args Factor="3" LoopLoc="../../lab1_files/hls/axil_conv2D.cpp:42:17" LoopName="loop_x"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-437" msg_severity="INFO" msg_loc="../../lab1_files/hls/axil_conv2D.cpp:30:9" msg_body="Automatically disabling loop flattening for loop 'loop_j'.">
+        <args LoopName="loop_j"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="../../lab1_files/hls/axil_conv2D.cpp:30:9" msg_body="loop_flatten 0 1 axil_conv2D ../../lab1_files/hls/axil_conv2D.cpp:30:9loop_j ../../lab1_files/hls/axil_conv2D.cpp:30:9">
+        <args LoopLoc="../../lab1_files/hls/axil_conv2D.cpp:30:9" LoopLoc-DebugLoc="File ../../lab1_files/hls/axil_conv2D.cpp Line 30 Column 9" LoopName="loop_j" PragmaFunction="axil_conv2D" PragmaIsAuto="1" PragmaOptions="0" PragmaSrcLoc="../../lab1_files/hls/axil_conv2D.cpp:30:9" PragmaSrcLoc-DebugLoc="File ../../lab1_files/hls/axil_conv2D.cpp Line 30 Column 9" PragmaType="loop_flatten"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

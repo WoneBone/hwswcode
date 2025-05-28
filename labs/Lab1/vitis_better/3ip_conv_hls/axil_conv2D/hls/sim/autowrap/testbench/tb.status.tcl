@@ -1,0 +1,1 @@
+set ::AESL_AUTOSIM::gTopFileName /home/ares/Desktop/CO-Proj/Labs/Lab1/vitis_better/3ip_conv_hls/axil_conv2D/hls/./sim/autowrap/testbench/axil_conv2D.cpp_pre.cpp.tb.cpp

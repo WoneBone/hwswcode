@@ -1,0 +1,373 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1.2 (lin64) Build 5164865 Thu Sep  5 14:36:28 MDT 2024
+| Date         : Fri May 23 14:14:23 2025
+| Host         : ares running 64-bit Linux Mint 21.2
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'ip_3_axil_conv2D_2_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of ip_3_axil_conv2D_2_0 (xilinx.com:hls:axil_conv2D:1.0) from (Rev. 2114093082) to (Rev. 2114095818)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1.2 (lin64) Build 5164865 Thu Sep  5 14:36:28 MDT 2024
+| Date         : Fri May 23 14:14:23 2025
+| Host         : ares running 64-bit Linux Mint 21.2
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'ip_3_axil_conv2D_1_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of ip_3_axil_conv2D_1_0 (xilinx.com:hls:axil_conv2D:1.0) from (Rev. 2114093082) to (Rev. 2114095818)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1.2 (lin64) Build 5164865 Thu Sep  5 14:36:28 MDT 2024
+| Date         : Fri May 23 14:14:23 2025
+| Host         : ares running 64-bit Linux Mint 21.2
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'ip_3_axil_conv2D_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of ip_3_axil_conv2D_0_0 (xilinx.com:hls:axil_conv2D:1.0) from (Rev. 2114093082) to (Rev. 2114095818)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1.2 (lin64) Build 5164865 Thu Sep  5 14:36:28 MDT 2024
+| Date         : Wed May 21 15:45:34 2025
+| Host         : ares running 64-bit Linux Mint 21.2
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'ip_3_axil_conv2D_2_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of ip_3_axil_conv2D_2_0 (xilinx.com:hls:axil_conv2D:1.0) from (Rev. 2114092963) to (Rev. 2114093082)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1.2 (lin64) Build 5164865 Thu Sep  5 14:36:28 MDT 2024
+| Date         : Wed May 21 15:45:34 2025
+| Host         : ares running 64-bit Linux Mint 21.2
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'ip_3_axil_conv2D_1_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of ip_3_axil_conv2D_1_0 (xilinx.com:hls:axil_conv2D:1.0) from (Rev. 2114092963) to (Rev. 2114093082)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1.2 (lin64) Build 5164865 Thu Sep  5 14:36:28 MDT 2024
+| Date         : Wed May 21 15:45:34 2025
+| Host         : ares running 64-bit Linux Mint 21.2
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'ip_3_axil_conv2D_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of ip_3_axil_conv2D_0_0 (xilinx.com:hls:axil_conv2D:1.0) from (Rev. 2114092963) to (Rev. 2114093082)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1.2 (lin64) Build 5164865 Thu Sep  5 14:36:28 MDT 2024
+| Date         : Wed May 21 13:47:21 2025
+| Host         : ares running 64-bit Linux Mint 21.2
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'ip_3_axil_conv2D_2_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of ip_3_axil_conv2D_2_0 (xilinx.com:hls:axil_conv2D:1.0) from (Rev. 2114092844) to (Rev. 2114092963)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1.2 (lin64) Build 5164865 Thu Sep  5 14:36:28 MDT 2024
+| Date         : Wed May 21 13:47:21 2025
+| Host         : ares running 64-bit Linux Mint 21.2
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'ip_3_axil_conv2D_1_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of ip_3_axil_conv2D_1_0 (xilinx.com:hls:axil_conv2D:1.0) from (Rev. 2114092844) to (Rev. 2114092963)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1.2 (lin64) Build 5164865 Thu Sep  5 14:36:28 MDT 2024
+| Date         : Wed May 21 13:47:21 2025
+| Host         : ares running 64-bit Linux Mint 21.2
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'ip_3_axil_conv2D_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of ip_3_axil_conv2D_0_0 (xilinx.com:hls:axil_conv2D:1.0) from (Rev. 2114092844) to (Rev. 2114092963)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1.2 (lin64) Build 5164865 Thu Sep  5 14:36:28 MDT 2024
+| Date         : Wed May 21 11:46:46 2025
+| Host         : ares running 64-bit Linux Mint 21.2
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'ip_3_axil_conv2D_2_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of ip_3_axil_conv2D_2_0 (xilinx.com:hls:axil_conv2D:1.0) from (Rev. 2114092791) to (Rev. 2114092844)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1.2 (lin64) Build 5164865 Thu Sep  5 14:36:28 MDT 2024
+| Date         : Wed May 21 11:46:45 2025
+| Host         : ares running 64-bit Linux Mint 21.2
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'ip_3_axil_conv2D_1_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of ip_3_axil_conv2D_1_0 (xilinx.com:hls:axil_conv2D:1.0) from (Rev. 2114092791) to (Rev. 2114092844)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1.2 (lin64) Build 5164865 Thu Sep  5 14:36:28 MDT 2024
+| Date         : Wed May 21 11:46:45 2025
+| Host         : ares running 64-bit Linux Mint 21.2
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'ip_3_axil_conv2D_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of ip_3_axil_conv2D_0_0 (xilinx.com:hls:axil_conv2D:1.0) from (Rev. 2114092791) to (Rev. 2114092844)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1.2 (lin64) Build 5164865 Thu Sep  5 14:36:28 MDT 2024
+| Date         : Wed May 21 10:52:07 2025
+| Host         : ares running 64-bit Linux Mint 21.2
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'ip_3_axil_conv2D_2_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of ip_3_axil_conv2D_2_0 (xilinx.com:hls:axil_conv2D:1.0) from (Rev. 2114091791) to (Rev. 2114092791)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1.2 (lin64) Build 5164865 Thu Sep  5 14:36:28 MDT 2024
+| Date         : Wed May 21 10:52:07 2025
+| Host         : ares running 64-bit Linux Mint 21.2
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'ip_3_axil_conv2D_1_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of ip_3_axil_conv2D_1_0 (xilinx.com:hls:axil_conv2D:1.0) from (Rev. 2114091791) to (Rev. 2114092791)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1.2 (lin64) Build 5164865 Thu Sep  5 14:36:28 MDT 2024
+| Date         : Wed May 21 10:52:07 2025
+| Host         : ares running 64-bit Linux Mint 21.2
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'ip_3_axil_conv2D_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of ip_3_axil_conv2D_0_0 (xilinx.com:hls:axil_conv2D:1.0) from (Rev. 2114091791) to (Rev. 2114092791)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1.2 (lin64) Build 5164865 Thu Sep  5 14:36:28 MDT 2024
+| Date         : Tue May 20 18:13:37 2025
+| Host         : ares running 64-bit Linux Mint 21.2
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'ip_3_axil_conv2D_2_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of ip_3_axil_conv2D_2_0 (xilinx.com:hls:axil_conv2D:1.0) from (Rev. 2114091714) to (Rev. 2114091791)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1.2 (lin64) Build 5164865 Thu Sep  5 14:36:28 MDT 2024
+| Date         : Tue May 20 18:13:37 2025
+| Host         : ares running 64-bit Linux Mint 21.2
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'ip_3_axil_conv2D_1_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of ip_3_axil_conv2D_1_0 (xilinx.com:hls:axil_conv2D:1.0) from (Rev. 2114091714) to (Rev. 2114091791)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1.2 (lin64) Build 5164865 Thu Sep  5 14:36:28 MDT 2024
+| Date         : Tue May 20 18:13:37 2025
+| Host         : ares running 64-bit Linux Mint 21.2
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'ip_3_axil_conv2D_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of ip_3_axil_conv2D_0_0 (xilinx.com:hls:axil_conv2D:1.0) from (Rev. 2114091714) to (Rev. 2114091791)
+

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="ip_3_axil_conv2D_0_0_synth_1" LaunchDir="/home/ares/Desktop/CO-Proj/Labs/Lab1/vitis_better/viviado_3ip/viviado_3ip.runs/ip_3_axil_conv2D_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="ip_3_axil_conv2D_1_0_synth_1" LaunchDir="/home/ares/Desktop/CO-Proj/Labs/Lab1/vitis_better/viviado_3ip/viviado_3ip.runs/ip_3_axil_conv2D_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="ip_3_axil_conv2D_0_0_synth_1"/>
+	</Run>
+	<Run Id="ip_3_axil_conv2D_2_0_synth_1" LaunchDir="/home/ares/Desktop/CO-Proj/Labs/Lab1/vitis_better/viviado_3ip/viviado_3ip.runs/ip_3_axil_conv2D_2_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="ip_3_axil_conv2D_0_0_synth_1"/>
+	</Run>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+		<Parameter Name="general.ignorePathLengthChecks" Val="true" Type="bool"/>
+		<Parameter Name="general.shortenLongPath" Val="true" Type="bool"/>
+	</Parameters>
+	<ProductInfo Name="vivado"/>
+</Runs>
+

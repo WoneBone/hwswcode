@@ -1,0 +1,42 @@
+#-----------------------------------------------------------
+# Vivado v2024.1.2 (64-bit)
+# SW Build 5164865 on Thu Sep  5 14:36:28 MDT 2024
+# IP Build 5164407 on Fri Sep  6 08:18:11 MDT 2024
+# SharedData Build 5164864 on Thu Sep 05 13:09:09 MDT 2024
+# Start of session at: Tue May 20 17:05:21 2025
+# Process ID: 23356
+# Current directory: /home/ares/Desktop/CO-Proj/Labs/Lab1/vitis_better/viviado_3ip/viviado_3ip.runs/ip_3_processing_system7_0_0_synth_1
+# Command line: vivado -log ip_3_processing_system7_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ip_3_processing_system7_0_0.tcl
+# Log file: /home/ares/Desktop/CO-Proj/Labs/Lab1/vitis_better/viviado_3ip/viviado_3ip.runs/ip_3_processing_system7_0_0_synth_1/ip_3_processing_system7_0_0.vds
+# Journal file: /home/ares/Desktop/CO-Proj/Labs/Lab1/vitis_better/viviado_3ip/viviado_3ip.runs/ip_3_processing_system7_0_0_synth_1/vivado.jou
+# Running On        :ares
+# Platform          :Linuxmint
+# Operating System  :Linux Mint 21.2
+# Processor Detail  :Intel(R) Core(TM) i5-4200U CPU @ 1.60GHz
+# CPU Frequency     :2600.000 MHz
+# CPU Physical cores:2
+# CPU Logical cores :4
+# Host memory       :8217 MB
+# Swap memory       :2147 MB
+# Total Virtual     :10364 MB
+# Available Virtual :4096 MB
+#-----------------------------------------------------------
+source ip_3_processing_system7_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:20 ; elapsed = 00:00:28 . Memory (MB): peak = 1363.148 ; gain = 50.836 ; free physical = 132 ; free virtual = 3003
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/ares/Desktop/CO-Proj/Labs/Lab1/vitis_better/3ip_conv_hls/axil_conv2D/hls/impl/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/ares/tools/Xilinx/Vivado/2024.1/data/ip'.
+Command: synth_design -top ip_3_processing_system7_0_0 -part xc7z010clg400-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Device 21-9227] Part: xc7z010clg400-1 does not have CEAM library.
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 23607
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:26 . Memory (MB): peak = 2133.738 ; gain = 412.660 ; free physical = 125 ; free virtual = 768
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'ip_3_processing_system7_0_0' [/home/ares/Desktop/CO-Proj/Labs/Lab1/vitis_better/viviado_3ip/viviado_3ip.gen/sources_1/bd/ip_3/ip/ip_3_processing_system7_0_0/synth/ip_3_processing_system7_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'processing_system7_v5_5_processing_system7' [/home/ares/Desktop/CO-Proj/Labs/Lab1/vitis_better/viviado_3ip/viviado_3ip.gen/sources_1/bd/ip_3/ip/ip_3_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:152]
