@@ -29,6 +29,7 @@ typedef ap_fixed<16,16> accum_t; /* IMAGE_BIT_WIDTH + WEIGHT_BIT_WIDTH + 5 */
  */
 void axil_conv2D(input_image_t image_in[(IMAGE_HEIGHT * IMAGE_WIDTH)/4 ],
                  output_image_t image_out[(OUTPUT_HEIGHT * OUTPUT_WIDTH)/4 ],
+                 output_image_t max_out[(MAX_OUT_SIZE*MAX_OUT_SIZE)/4],
                  weight_t weights[KERNEL_SIZE * KERNEL_SIZE],
                  bias_t bias);
 

@@ -19,11 +19,11 @@
  #include <stdio.h>
 
  #include "hw_cnn.h"
- #include "image.h"
+ #include "image_hw.h"
  
  volatile unsigned char *ch_images; /* images data region */
- volatile float *fp_params;         /* network parameters data region */
- volatile float *fp_image;          /* scaled floating-point image to be processed */
+ volatile signed char *fp_params;         /* network parameters data region */
+ volatile signed char *fp_image;          /* scaled floating-point image to be processed */
  volatile float *matA;              /* auxiliary matrix A to implement 3D convolution as a matrix multiplication */
  volatile float *matCv;             /* output of convolutional layer before adding bias */
  volatile float *matCbias;          /* output of convolutional layer after adding bias */
@@ -40,8 +40,8 @@
  
      /* Assign memory regions */
      ch_images = (unsigned char *) MEM_BASE_ADDR;
-     fp_params = (float *) ((unsigned char *) ch_images + MEM_BIN_IMAGES);
-     fp_image = (float *) ((unsigned char *) fp_params + MEM_BIN_PARAMS);
+     fp_params = (signed char *) ((unsigned char *) ch_images + MEM_BIN_IMAGES);
+     fp_image = (signed char *) ((unsigned char *) fp_params + MEM_BIN_PARAMS);
      matA = (float *) ((unsigned char *) fp_image + MEM_FP_IMAGE);
      matCv = (float *) ((unsigned char *) matA + MEM_MAT_A);
      matCbias = (float *) ((unsigned char *) matCv + MEM_MAT_C_V);
@@ -79,7 +79,7 @@
  #if defined(EMBEDDED) && defined(PRINT_TIME_PER_LAYER)
      double t_conv = xilGetMilliseconds();
  #endif
-     forward_max_pool_layer();
+ 
  #if defined(EMBEDDED) && defined(PRINT_TIME_PER_LAYER)
      double t_pool = xilGetMilliseconds();
  #endif
@@ -159,7 +159,7 @@
      for (int i = 0; i < size; i++)
          Crl[i] = C[i] < 0 ? 0 : C[i];
  }
- 
+ #define IP_BASEADDR 0x40000000
  void forward_convolutional_layer() {
  #ifdef USE_GEMM
      compute_matrixA();
@@ -179,25 +179,22 @@
               (float *) fp_params,
               (float *) matCbias);
  #else
-     for (int i = 0; i < CONV_OFM_NUMBER; i++) {
-         float bias = fp_params[i];
- 
-         /* Address where the convolutional weights are stored */
-         float *fp_weights =
-                 (float *) fp_params +                                       /* start address of params */
-                 CONV_OFM_NUMBER +                                           /* offset (biases) */
-                 i * (IMAGE_CHANNELS * CONV_KERNEL_SIZE * CONV_KERNEL_SIZE); /* kernel of OFM(i) */
- 
-         float *image_out =
-                 (float *) matCbias +                                        /* base address */
-                 i * (CONV_OUTPUT_HEIGHT * CONV_OUTPUT_WIDTH);               /* offset (number of images) */
- 
-         sw_convolution_3D((float *) fp_image, fp_weights, bias, image_out);
-     }
+    volatile unsigned int *in_image = (unsigned int *)(IP_BASEADDR + XAXIL_CONV2D_BUS1_ADDR_IMAGE_IN_BASE);
+    volatile unsigned int *max_out = (unsigned int *)(IP_BASEADDR + XAXIL_CONV2D_BUS1_ADDR_MAX_OUT_BASE);
+    volatile unsigned int *image_out = (unsigned int *)(IP_BASEADDR + XAXIL_CONV2D_BUS1_ADDR_IMAGE_OUT_BASE);
+    volatile signed char *weights = (signed char *)(IP_BASEADDR + XAXIL_CONV2D_BUS1_ADDR_WEIGHTS_BASE);
+    
+    for (int i = 0; i < CONV_OFM_NUMBER; i++) {
+        signed char bias = fp_params[i];
+        /* Address where the convolutional weights are stored */
+        signed char *fp_weights =
+                (float *) fp_params +                                       /* start address of params */
+                CONV_OFM_NUMBER +                                           /* offset (biases) */
+                i * (IMAGE_CHANNELS * CONV_KERNEL_SIZE * CONV_KERNEL_SIZE); /* kernel of OFM(i) */
+
+     
  #endif // USE_GEMM
-     ReLU((float *) matCbias,
-          CONV_OFM_NUMBER * CONV_OUTPUT_HEIGHT * CONV_OUTPUT_WIDTH,
-          (float *) matCrelu);
+
  }
  
  void forward_max_pool_layer() {
@@ -311,7 +308,7 @@
          unsigned char *image_in = (unsigned char *) ch_images + i * IMAGE_SIZE;
  
          /* normalize to [-1, 1] */
-         normalize_image((unsigned char *) image_in, (float *) fp_image);
+         normalize_image((unsigned char *) image_in, (signed char*) fp_image);
  
  #ifdef PRINT_IMAGE
          print_ppm(image_in);

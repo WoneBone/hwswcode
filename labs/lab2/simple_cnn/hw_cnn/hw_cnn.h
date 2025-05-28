@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <math.h>
 #include <assert.h>
-#include "image.h"
+#include "image_hw.h"
 #include "gemm.h"
 
 /* ============================= START OF RUN CONFIGURATION ============================ */
