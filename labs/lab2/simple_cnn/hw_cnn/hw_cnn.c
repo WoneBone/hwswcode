@@ -123,30 +123,31 @@
                      }
  }
  
- void sw_convolution_3D(const float *image_in, const float *weights, float bias, float *image_out) {
-     for (int i = 0; i < CONV_OUTPUT_HEIGHT; i++) {
-         for (int j = 0; j < CONV_OUTPUT_WIDTH; j++) {
-             float accum = 0;
-             for (int k = 0; k < IMAGE_CHANNELS; k++) {
-                 for (int x = 0; x < CONV_KERNEL_SIZE; x++) {
-                     for (int y = 0; y < CONV_KERNEL_SIZE; y++) {
-                         /* Weights matrix index */
-                         int weight_1d_idx =
-                                 k * (CONV_KERNEL_SIZE * CONV_KERNEL_SIZE) + /* OFM */
-                                 x * CONV_KERNEL_SIZE + y;                   /* planar coordinate */
- 
-                         /* Input image index */
-                         int image_1d_idx =
-                                 k * (IMAGE_HEIGHT * IMAGE_WIDTH) +          /* OFM */
-                                 (x + i) * IMAGE_HEIGHT + (y + j);           /* pixel */
- 
-                         accum += weights[weight_1d_idx] * image_in[image_1d_idx];
-                     }
-                 }
-             }
-             image_out[i * CONV_OUTPUT_WIDTH + j] = accum + bias;
-         }
-     }
+ void hw_convolution_3D(const unsigned int *image_in, const signed char *weights, signed char bias, unsigned int *max_out){
+
+	volatile unsigned int *in_image = (unsigned int *)(IP_BASEADDR + XAXIL_CONV2D_BUS1_ADDR_IMAGE_IN_BASE);
+	volatile unsigned int *out_max = (unsigned int *)(IP_BASEADDR + XAXIL_CONV2D_BUS1_ADDR_MAX_OUT_BASE);
+	volatile unsigned int *out_image = (unsigned int *)(IP_BASEADDR + XAXIL_CONV2D_BUS1_ADDR_IMAGE_OUT_BASE);
+	volatile signed char *hw_weights = (signed char *)(IP_BASEADDR + XAXIL_CONV2D_BUS1_ADDR_WEIGHTS_BASE);
+	volatile signed char hw_bias = (signed char *)(IP_BASEADDR + XAXIL_CONV2D_BUS1_ADDR_BIAS);
+
+	hw_bias = bias;
+	for(int i = 0; i < IMAGE_SIZE*IMAGE_SIZE*IMAGE_CHANNELS/4; i++){
+		in_image[i]=image_in[i];
+	}
+
+	for(int i = 0; i < 27; i++){
+		hw_weights[i]=weights[i];
+	}
+
+	//TODO:
+	//Bits de controlo
+	
+	for(int i = 0; i < 43*43; i++){
+		max_out[i]=out_max[i];
+	}
+	
+
  }
  
  void add_bias(const float *C, int rows, int cols, const float *bias, float *Cbias) {
@@ -179,10 +180,6 @@
               (float *) fp_params,
               (float *) matCbias);
  #else
-    volatile unsigned int *in_image = (unsigned int *)(IP_BASEADDR + XAXIL_CONV2D_BUS1_ADDR_IMAGE_IN_BASE);
-    volatile unsigned int *max_out = (unsigned int *)(IP_BASEADDR + XAXIL_CONV2D_BUS1_ADDR_MAX_OUT_BASE);
-    volatile unsigned int *image_out = (unsigned int *)(IP_BASEADDR + XAXIL_CONV2D_BUS1_ADDR_IMAGE_OUT_BASE);
-    volatile signed char *weights = (signed char *)(IP_BASEADDR + XAXIL_CONV2D_BUS1_ADDR_WEIGHTS_BASE);
     
     for (int i = 0; i < CONV_OFM_NUMBER; i++) {
         signed char bias = fp_params[i];
