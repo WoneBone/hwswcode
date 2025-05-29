@@ -78,7 +78,9 @@
     return (int)(f * (float)(1 << scale) + 0.5F);
  }
  
-
+ float fixed2float(int i, int scale) {
+    return (float)i / (float)(1 << scale);
+}
 
 
  int predict_class() {
@@ -196,8 +198,16 @@
                 (float *) fp_params +                                       /* start address of params */
                 CONV_OFM_NUMBER +                                           /* offset (biases) */
                 i * (IMAGE_CHANNELS * CONV_KERNEL_SIZE * CONV_KERNEL_SIZE); /* kernel of OFM(i) */
+        
+        int *fix_out_image =
+                (float *) matCrelu +                                        /* base address */
+                i * (CONV_OUTPUT_HEIGHT * CONV_OUTPUT_WIDTH);               /* offset (number of images) */
+
         hw_convolution_3D((int*) *fixed_image, *fp_weights, bias, (int*) fix_out_image);
 
+    }
+    for(int i = 0; i < 43*43; i++){
+        matCrelu[i]=fixed2float(fix_out_image,16); 
     } 
  #endif // USE_GEMM
 } 

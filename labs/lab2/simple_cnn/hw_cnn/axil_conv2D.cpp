@@ -15,12 +15,12 @@ void axil_conv2D(input_image_t image_in[(IMAGE_HEIGHT * IMAGE_WIDTH*3)],
                  weight_t weights[KERNEL_SIZE * KERNEL_SIZE*3],
                  bias_t bias) {
 
-#pragma HLS INTERFACE s_axilite port=return bundle=BUS1
-#pragma HLS INTERFACE s_axilite port=image_in bundle=BUS1
-#pragma HLS INTERFACE s_axilite port=image_out bundle=BUS1
-#pragma HLS INTERFACE s_axilite port=max_out bundle=BUS1
-#pragma HLS INTERFACE s_axilite port=weights bundle=BUS1
-#pragma HLS INTERFACE s_axilite port=bias bundle=BUS1
+    #pragma HLS INTERFACE s_axilite port=return bundle=BUS1
+    #pragma HLS INTERFACE s_axilite port=image_in bundle=BUS1
+    #pragma HLS INTERFACE s_axilite port=image_out bundle=BUS1
+    #pragma HLS INTERFACE s_axilite port=max_out bundle=BUS1
+    #pragma HLS INTERFACE s_axilite port=weights bundle=BUS1
+    #pragma HLS INTERFACE s_axilite port=bias bundle=BUS1
     
    
     loop_i:
