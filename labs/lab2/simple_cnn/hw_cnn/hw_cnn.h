@@ -145,6 +145,7 @@ void compute_matrixA();
  * @param image_out Matrix containing resulting convolution OFMs
  */
 void sw_convolution_3D(const float *image_in, const float *weights, float bias, float *image_out);
+void hw_convolution_3D(const unsigned int *image_in,__int16_t *weights, __int16_t bias, unsigned int *max_out);
 
 /**
  * Adds bias to all elements of the input matrix.
@@ -201,7 +202,7 @@ void print_fp(float *matrix, int n, char *description);
  * @param cols Number of columns
  */
 void print_fp_mat(float *matrix, int rows, int cols);
-
+int float2fixed(float f, int scale)
 #ifdef EMBEDDED
 /**
  * Gets elapsed time in milliseconds in zynq device.
