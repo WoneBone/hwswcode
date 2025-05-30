@@ -1,0 +1,10 @@
+{
+  "workspaceRoot": "/home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/vitis",
+  "mapping": {
+    "/home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/simple_cnn/hw_cnn/axil_conv2D.cpp": "cnn_ip_v1",
+    "/home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/simple_cnn/axil_conv2D.h": "cnn_ip_v1",
+    "/home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/simple_cnn/tb_axil_conv2D.cpp": "cnn_ip_v1",
+    "/home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/simple_cnn/hw_cnn/axil_conv2D.h": "cnn_ip_v1",
+    "/home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/simple_cnn/axil_conv2D.cpp": "cnn_ip_v1"
+  }
+}

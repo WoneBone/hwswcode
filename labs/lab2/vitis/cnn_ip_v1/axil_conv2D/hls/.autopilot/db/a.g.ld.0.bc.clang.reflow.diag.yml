@@ -1,0 +1,61 @@
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ../../simple_cnn/hw_cnn/axil_conv2D.cpp, Line: 44, 
+                   Column: 17 }
+Function:        _Z11axil_conv2DP8ap_fixedILi16ELi16EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S3_PS_ILi1ELi15ELS0_5ELS1_3ELi0EES4_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        loop_x
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../../simple_cnn/hw_cnn/axil_conv2D.cpp, Line: 16, 
+                   Column: 0 }
+Function:        _Z11axil_conv2DP8ap_fixedILi16ELi16EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S3_PS_ILi1ELi15ELS0_5ELS1_3ELi0EES4_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        loop_x
+  - String:          ''' ('
+  - LoopLoc:         '../../simple_cnn/hw_cnn/axil_conv2D.cpp:44:17'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          axil_conv2D
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Failure
+Pass:            reflow-occurrence-inference
+Name:            NonComputableLoopForm
+DebugLoc:        { File: ../../simple_cnn/hw_cnn/axil_conv2D.cpp, Line: 62, 
+                   Column: 9 }
+Function:        _Z11axil_conv2DP8ap_fixedILi16ELi16EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_S3_PS_ILi1ELi15ELS0_5ELS1_3ELi0EES4_
+Args:            
+  - String:          'Could not analyze occurrence information within '''
+  - LoopName:        loop_n
+  - String:          '''('
+  - LoopLoc:         '../../simple_cnn/hw_cnn/axil_conv2D.cpp:62:9'
+  - String:          ') . Requires loop in simplify form and with single exit.'
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        loop_j
+  - String:          '> at '
+  - LoopLoc:         '../../simple_cnn/hw_cnn/axil_conv2D.cpp:29:9'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        loop_n
+  - String:          '> at '
+  - LoopLoc:         '../../simple_cnn/hw_cnn/axil_conv2D.cpp:62:9'
+  - String:          ' '
+...

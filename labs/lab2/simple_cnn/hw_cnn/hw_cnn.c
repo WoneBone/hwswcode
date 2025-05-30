@@ -20,6 +20,7 @@
 
  #include "hw_cnn.h"
  #include "image_hw.h"
+ #include "xaxil_conv2d_hw.h"
  
  volatile unsigned char *ch_images; /* images data region */
  volatile float *fp_params;         /* network parameters data region */
