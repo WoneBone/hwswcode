@@ -137,14 +137,14 @@
  
  #define IP_BASEADDR 0x40000000
  void hw_convolution_3D(const unsigned int *image_in,__int16_t *weights, __int16_t bias, unsigned int *max_out){
-
 	volatile unsigned int *in_image = (unsigned int *)(IP_BASEADDR + XAXIL_CONV2D_BUS1_ADDR_IMAGE_IN_BASE);
 	volatile unsigned int *out_max = (unsigned int *)(IP_BASEADDR + XAXIL_CONV2D_BUS1_ADDR_MAX_OUT_BASE);
 	volatile unsigned int *out_image = (unsigned int *)(IP_BASEADDR + XAXIL_CONV2D_BUS1_ADDR_IMAGE_OUT_BASE);
 	volatile __int16_t *hw_weights = (__int16_t *)(IP_BASEADDR + XAXIL_CONV2D_BUS1_ADDR_WEIGHTS_BASE);
 	volatile __int16_t hw_bias = (__int16_t *)(IP_BASEADDR + XAXIL_CONV2D_BUS1_ADDR_BIAS);
     volatile int *control = (int *)(IP_BASEADDR + XAXIL_CONV2D_BUS1_ADDR_AP_CTRL);
-	hw_bias = bias;
+	*hw_bias = bias;
+
 	for(int i = 0; i < IMAGE_SIZE*IMAGE_SIZE*IMAGE_CHANNELS/4; i++){
 		in_image[i]=image_in[i];
 	}
@@ -157,11 +157,9 @@
     
     while ((*control & 2) == 0);
 	
-    for(int i = 0; i < 43*43; i++){
+	for(int i = 0; i < 43*43; i++){
 		max_out[i]=out_max[i];
 	}
-	
-
  }
  
  void add_bias(const float *C, int rows, int cols, const float *bias, float *Cbias) {
@@ -309,6 +307,7 @@
          printf("\n\r");
      }
  }
+
  
  #ifdef EMBEDDED
  double xilGetMilliseconds() {
