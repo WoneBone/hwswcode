@@ -11,12 +11,12 @@
 #define MAX_OUT_SIZE 43
 /* Number of bits used to represent weights and pixel values */
 #define WEIGHT_BIT_WIDTH 8
-#define IMAGE_BIT_WIDTH 32
+#define IMAGE_BIT_WIDTH 16
 
-typedef ap_fixed<1,7> weight_t;
-typedef ap_uint<IMAGE_BIT_WIDTH> input_image_t;
+typedef ap_fixed<1,15> weight_t;
+typedef ap_fixed<16,16> input_image_t;
 typedef ap_fixed<16,16> output_image_t;
-typedef ap_fixed<1,7> bias_t;
+typedef ap_fixed<1,15> bias_t;
 typedef ap_uint<14> count_t;
 typedef ap_fixed<16,16> accum_t; /* IMAGE_BIT_WIDTH + WEIGHT_BIT_WIDTH + 5 */
 
@@ -27,9 +27,9 @@ typedef ap_fixed<16,16> accum_t; /* IMAGE_BIT_WIDTH + WEIGHT_BIT_WIDTH + 5 */
  * @param weights
  * @param bias
  */
-void axil_conv2D(input_image_t image_in[(IMAGE_HEIGHT * IMAGE_WIDTH)/4 ],
-                 output_image_t image_out[(OUTPUT_HEIGHT * OUTPUT_WIDTH)/4 ],
-                 output_image_t max_out[(MAX_OUT_SIZE*MAX_OUT_SIZE)/4],
+void axil_conv2D(input_image_t image_in[(IMAGE_HEIGHT * IMAGE_WIDTH)],
+                 output_image_t image_out[(OUTPUT_HEIGHT * OUTPUT_WIDTH)],
+                 output_image_t max_out[(MAX_OUT_SIZE*MAX_OUT_SIZE)],
                  weight_t weights[KERNEL_SIZE * KERNEL_SIZE],
                  bias_t bias);
 

@@ -9,12 +9,14 @@
 
 #include "image_hw.h"
 
-void normalize_image(const unsigned char *rgb_image, signed char *norm_image) {
+void normalize_image(const unsigned char *rgb_image, float *norm_image, int *norm_image_fixed) {
     /* Scales image pixels to be floating-point values in range [-1, 1] */
-    for (int i = 0; i < IMAGE_SIZE; i++)
-        norm_image[i] = ( rgb_image[i] - 128);
-}
+    for (int i = 0; i < IMAGE_SIZE; i++){
+        norm_image[i] = ((float) rgb_image[i] / 255 - 0.5F) / 0.5F;
+        norm_image_fixed[i]=float2fixed(norm_image[i],16);
+    }
 
+}
 void print_ppm(unsigned char *rgb_image) {
     printf("P3\r\n%d %d 255\r\n", IMAGE_WIDTH, IMAGE_HEIGHT);
     for (int i = 0, k = 0; i < IMAGE_WIDTH; i++)
@@ -34,4 +36,8 @@ void print_fp_image(float *norm_image) {
                 printf("%f ", norm_image[z * (IMAGE_WIDTH * IMAGE_HEIGHT) + y * IMAGE_WIDTH + x]);
             printf("\n\r");
         }
+}
+
+int float2fixed(float f, int scale) {
+    return (int)(f * (float)(1 << scale) + 0.5F);
 }

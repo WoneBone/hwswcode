@@ -22,8 +22,10 @@
  #include "image_hw.h"
  
  volatile unsigned char *ch_images; /* images data region */
- volatile signed char *fp_params;         /* network parameters data region */
- volatile signed char *fp_image;          /* scaled floating-point image to be processed */
+ volatile float *fp_params;         /* network parameters data region */
+ volatile float *fp_image;          /* scaled floating-point image to be processed */
+ volatile int *fixed_image;         /* scaled fixed-point image to be processed */
+ volatile int *fix_out_image;         /* scaled fixed-point image to be processed */
  volatile float *matA;              /* auxiliary matrix A to implement 3D convolution as a matrix multiplication */
  volatile float *matCv;             /* output of convolutional layer before adding bias */
  volatile float *matCbias;          /* output of convolutional layer after adding bias */
@@ -40,8 +42,8 @@
  
      /* Assign memory regions */
      ch_images = (unsigned char *) MEM_BASE_ADDR;
-     fp_params = (signed char *) ((unsigned char *) ch_images + MEM_BIN_IMAGES);
-     fp_image = (signed char *) ((unsigned char *) fp_params + MEM_BIN_PARAMS);
+     fp_params = (float *) ((unsigned char *) ch_images + MEM_BIN_IMAGES);
+     fp_image = (float *) ((unsigned char *) fp_params + MEM_BIN_PARAMS);
      matA = (float *) ((unsigned char *) fp_image + MEM_FP_IMAGE);
      matCv = (float *) ((unsigned char *) matA + MEM_MAT_A);
      matCbias = (float *) ((unsigned char *) matCv + MEM_MAT_C_V);
@@ -70,7 +72,17 @@
      fclose(images_file);
  #endif // EMBEDDED
  }
+
+
+ int float2fixed(float f, int scale) {
+    return (int)(f * (float)(1 << scale) + 0.5F);
+ }
  
+ float fixed2float(int i, int scale) {
+    return (float)i / (float)(1 << scale);
+}
+
+
  int predict_class() {
  #if defined(EMBEDDED) && defined(PRINT_TIME_PER_LAYER)
      double t_start = xilGetMilliseconds();
@@ -123,14 +135,13 @@
                      }
  }
  
- void hw_convolution_3D(const unsigned int *image_in, const signed char *weights, signed char bias, unsigned int *max_out){
-
+ void hw_convolution_3D(const unsigned int *image_in,__int16_t *weights, __int16_t bias, unsigned int *max_out){
 	volatile unsigned int *in_image = (unsigned int *)(IP_BASEADDR + XAXIL_CONV2D_BUS1_ADDR_IMAGE_IN_BASE);
 	volatile unsigned int *out_max = (unsigned int *)(IP_BASEADDR + XAXIL_CONV2D_BUS1_ADDR_MAX_OUT_BASE);
 	volatile unsigned int *out_image = (unsigned int *)(IP_BASEADDR + XAXIL_CONV2D_BUS1_ADDR_IMAGE_OUT_BASE);
-	volatile signed char *hw_weights = (signed char *)(IP_BASEADDR + XAXIL_CONV2D_BUS1_ADDR_WEIGHTS_BASE);
-	volatile signed char *hw_bias = (signed char *)(IP_BASEADDR + XAXIL_CONV2D_BUS1_ADDR_BIAS_DATA);
-	volatile int controll = (int *)(IP_BASEADDR + XAXIL_CONV2D_BUS1_ADDR_AP_CTRL);
+	volatile __int16_t *hw_weights = (__int16_t *)(IP_BASEADDR + XAXIL_CONV2D_BUS1_ADDR_WEIGHTS_BASE);
+	volatile __int16_t *hw_bias = (__int16_t *)(IP_BASEADDR + XAXIL_CONV2D_BUS1_ADDR_BIAS);
+
 	*hw_bias = bias;
 	for(int i = 0; i < IMAGE_SIZE*IMAGE_SIZE*IMAGE_CHANNELS/4; i++){
 		in_image[i]=image_in[i];
@@ -140,8 +151,6 @@
 		hw_weights[i]=weights[i];
 	}
 
-	//TODO:
-	//Bits de controlo
 	
 	controll = 1;
 	while(controll & 2 == 0);
@@ -149,8 +158,6 @@
 	for(int i = 0; i < 43*43; i++){
 		max_out[i]=out_max[i];
 	}
-	
-
  }
  
  void add_bias(const float *C, int rows, int cols, const float *bias, float *Cbias) {
@@ -185,17 +192,25 @@
  #else
     
     for (int i = 0; i < CONV_OFM_NUMBER; i++) {
-        signed char bias = fp_params[i];
+        __int16_t bias = float2fixed(fp_params[i]);
         /* Address where the convolutional weights are stored */
-        signed char *fp_weights =
+        __int16_t *fp_weights =
                 (float *) fp_params +                                       /* start address of params */
                 CONV_OFM_NUMBER +                                           /* offset (biases) */
                 i * (IMAGE_CHANNELS * CONV_KERNEL_SIZE * CONV_KERNEL_SIZE); /* kernel of OFM(i) */
+        
+        int *fix_out_image =
+                (float *) matCrelu +                                        /* base address */
+                i * (CONV_OUTPUT_HEIGHT * CONV_OUTPUT_WIDTH);               /* offset (number of images) */
 
-     
+        hw_convolution_3D((int*) *fixed_image, *fp_weights, bias, (int*) fix_out_image);
+
+    }
+    for(int i = 0; i < 43*43; i++){
+        matCrelu[i]=fixed2float(fix_out_image,16); 
+    } 
  #endif // USE_GEMM
-
- }
+} 
  
  void forward_max_pool_layer() {
      for (int i = 0; i < POOL_OUTPUT_HEIGHT; i++)
@@ -290,6 +305,7 @@
          printf("\n\r");
      }
  }
+
  
  #ifdef EMBEDDED
  double xilGetMilliseconds() {
@@ -308,7 +324,7 @@
          unsigned char *image_in = (unsigned char *) ch_images + i * IMAGE_SIZE;
  
          /* normalize to [-1, 1] */
-         normalize_image((unsigned char *) image_in, (signed char*) fp_image);
+         normalize_image((unsigned char *) image_in,  fp_image);
  
  #ifdef PRINT_IMAGE
          print_ppm(image_in);

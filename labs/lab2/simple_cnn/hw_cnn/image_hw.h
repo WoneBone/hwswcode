@@ -27,9 +27,8 @@ static char image_class[10][9] = {"Airplane", "Bird", "Car", "Cat", "Deer", "Dog
  * @param rgb_image Flattened 3D matrix containing the RBG values of the pixels
  * @param norm_image Flattened 3D matrix containing the normalized values of the pixels
  */
-void normalize_image(const unsigned char *rgb_image, signed char *norm_image);
-
-/**
+void normalize_image(const unsigned char *rgb_image, float *norm_image, int *norm_image_fixed);
+    /**
  * Prints the input image to stdout in ppm format (see http://paulbourke.net/dataformats/ppm/).
  * @param rgb_image Flattened 3D matrix containing the RGB values of the pixels
  */
