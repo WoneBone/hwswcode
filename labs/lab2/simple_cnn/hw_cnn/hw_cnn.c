@@ -129,9 +129,9 @@
 	volatile unsigned int *out_max = (unsigned int *)(IP_BASEADDR + XAXIL_CONV2D_BUS1_ADDR_MAX_OUT_BASE);
 	volatile unsigned int *out_image = (unsigned int *)(IP_BASEADDR + XAXIL_CONV2D_BUS1_ADDR_IMAGE_OUT_BASE);
 	volatile signed char *hw_weights = (signed char *)(IP_BASEADDR + XAXIL_CONV2D_BUS1_ADDR_WEIGHTS_BASE);
-	volatile signed char hw_bias = (signed char *)(IP_BASEADDR + XAXIL_CONV2D_BUS1_ADDR_BIAS);
-
-	hw_bias = bias;
+	volatile signed char *hw_bias = (signed char *)(IP_BASEADDR + XAXIL_CONV2D_BUS1_ADDR_BIAS_DATA);
+	volatile int controll = (int *)(IP_BASEADDR + XAXIL_CONV2D_BUS1_ADDR_AP_CTRL);
+	*hw_bias = bias;
 	for(int i = 0; i < IMAGE_SIZE*IMAGE_SIZE*IMAGE_CHANNELS/4; i++){
 		in_image[i]=image_in[i];
 	}
@@ -142,6 +142,9 @@
 
 	//TODO:
 	//Bits de controlo
+	
+	controll = 1;
+	while(controll & 2 == 0);
 	
 	for(int i = 0; i < 43*43; i++){
 		max_out[i]=out_max[i];
