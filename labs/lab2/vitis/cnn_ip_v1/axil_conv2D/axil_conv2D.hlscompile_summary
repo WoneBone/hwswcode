@@ -1,0 +1,248 @@
+<ENTRY>
+{
+ "thisFile": "/home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/vitis/cnn_ip_v1/axil_conv2D/axil_conv2D.hlscompile_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Thu May 29 18:17:48 2025",
+ "timestampMillis": "1748539068705",
+ "buildStep": {
+  "cmdId": "527bb15c-cdf4-42b1-8faf-3d61b75fd880",
+  "name": "v++",
+  "logFile": "/home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/vitis/cnn_ip_v1/axil_conv2D/logs/axil_conv2D.steps.log",
+  "commandLine": "/home/ares/tools/Xilinx/Vitis/2024.1/bin/unwrapped/lnx64.o/v++  -c --mode hls --config /home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/vitis/cnn_ip_v1/hls_config.cfg --work_dir axil_conv2D ",
+  "args": [
+   "-c",
+   "--mode",
+   "hls",
+   "--config",
+   "/home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/vitis/cnn_ip_v1/hls_config.cfg",
+   "--work_dir",
+   "axil_conv2D"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/vitis/cnn_ip_v1/hls_config.cfg",
+    "content": "part=xc7z010clg400-1\n\n[hls]\nflow_target=vivado\npackage.output.format=ip_catalog\npackage.output.syn=false\nsyn.top=axil_conv2D\ntb.file=/home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/simple_cnn/tb_axil_conv2D.cpp\nclock=10ns\nclock_uncertainty=27%\nsyn.file=/home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/simple_cnn/axil_conv2D.h\nsyn.file=/home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/simple_cnn/axil_conv2D.cpp\nsyn.file=/home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/simple_cnn/hw_cnn/axil_conv2D.h\nsyn.file=/home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/simple_cnn/hw_cnn/axil_conv2D.cpp"
+   }
+  ],
+  "cwd": "/home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/vitis/cnn_ip_v1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu May 29 18:17:48 2025",
+ "timestampMillis": "1748539068705",
+ "status": {
+  "cmdId": "527bb15c-cdf4-42b1-8faf-3d61b75fd880",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Thu May 29 18:18:28 2025",
+ "timestampMillis": "1748539108634",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_COMPILE",
+  "target": "TT_HW",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "axil_conv2D",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/simple_cnn/axil_conv2D.h",
+     "/home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/simple_cnn/axil_conv2D.cpp",
+     "/home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/simple_cnn/hw_cnn/axil_conv2D.h",
+     "/home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/simple_cnn/hw_cnn/axil_conv2D.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2024.1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu May 29 18:18:28 2025",
+ "timestampMillis": "1748539108638",
+ "buildStep": {
+  "cmdId": "d82b957a-7c2c-4c6e-a8fd-ff33e4a361ef",
+  "name": "csynth_design",
+  "logFile": "/home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/vitis/cnn_ip_v1/axil_conv2D/hls/hls.log",
+  "commandLine": "csynth_design",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/vitis/cnn_ip_v1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu May 29 18:18:28 2025",
+ "timestampMillis": "1748539108640",
+ "status": {
+  "cmdId": "d82b957a-7c2c-4c6e-a8fd-ff33e4a361ef",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu May 29 18:18:28 2025",
+ "timestampMillis": "1748539108641",
+ "report": {
+  "path": "/home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/vitis/cnn_ip_v1/axil_conv2D/hls/hls_data.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu May 29 18:18:28 2025",
+ "timestampMillis": "1748539108642",
+ "report": {
+  "path": "/home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/vitis/cnn_ip_v1/axil_conv2D/hls/syn/report/csynth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu May 29 18:18:28 2025",
+ "timestampMillis": "1748539108643",
+ "report": {
+  "path": "/home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/vitis/cnn_ip_v1/axil_conv2D/hls/syn/report/csynth.xml",
+  "name": "",
+  "fileType": "XML",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu May 29 18:19:11 2025",
+ "timestampMillis": "1748539151327",
+ "report": {
+  "path": "/home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/vitis/cnn_ip_v1/axil_conv2D/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_DATAFLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu May 29 18:19:11 2025",
+ "timestampMillis": "1748539151328",
+ "report": {
+  "path": "/home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/vitis/cnn_ip_v1/axil_conv2D/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_FUNCTION_CALL_GRAPH",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu May 29 18:19:11 2025",
+ "timestampMillis": "1748539151329",
+ "report": {
+  "path": "/home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/vitis/cnn_ip_v1/axil_conv2D/hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_SCHEDULE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu May 29 18:19:11 2025",
+ "timestampMillis": "1748539151330",
+ "status": {
+  "cmdId": "d82b957a-7c2c-4c6e-a8fd-ff33e4a361ef",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu May 29 18:19:15 2025",
+ "timestampMillis": "1748539155384",
+ "status": {
+  "cmdId": "527bb15c-cdf4-42b1-8faf-3d61b75fd880",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu May 29 18:19:17 2025",
+ "timestampMillis": "1748539157785",
+ "report": {
+  "path": "/home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/vitis/cnn_ip_v1/axil_conv2D/reports/v++_compile_axil_conv2D_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu May 29 18:19:17 2025",
+ "timestampMillis": "1748539157785",
+ "report": {
+  "path": "/home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/vitis/cnn_ip_v1/axil_conv2D/reports/.db/v++_compile_axil_conv2D_guidance.pb3",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

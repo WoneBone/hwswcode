@@ -1,0 +1,44 @@
+#-----------------------------------------------------------
+# Vivado v2024.1.2 (64-bit)
+# SW Build 5164865 on Thu Sep  5 14:36:28 MDT 2024
+# IP Build 5164407 on Fri Sep  6 08:18:11 MDT 2024
+# SharedData Build 5164864 on Thu Sep 05 13:09:09 MDT 2024
+# Start of session at: Thu May 29 18:20:41 2025
+# Process ID: 41535
+# Current directory: /home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/vitis/cnn_ip_v1/axil_conv2D/hls/impl/ip
+# Command line: vivado -notrace -mode batch -source run_ippack.tcl
+# Log file: /home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/vitis/cnn_ip_v1/axil_conv2D/hls/impl/ip/vivado.log
+# Journal file: /home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/vitis/cnn_ip_v1/axil_conv2D/hls/impl/ip/vivado.jou
+# Running On        :ares
+# Platform          :Linuxmint
+# Operating System  :Linux Mint 21.2
+# Processor Detail  :Intel(R) Core(TM) i5-4200U CPU @ 1.60GHz
+# CPU Frequency     :2600.000 MHz
+# CPU Physical cores:2
+# CPU Logical cores :4
+# Host memory       :8217 MB
+# Swap memory       :2147 MB
+# Total Virtual     :10364 MB
+# Available Virtual :3112 MB
+#-----------------------------------------------------------
+source run_ippack.tcl -notrace
+INFO: calling package_hls_ip ip_types=vitis sysgen json_file=/home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/vitis/cnn_ip_v1/axil_conv2D/hls/hls_data.json outdir=/home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/vitis/cnn_ip_v1/axil_conv2D/hls/impl/ip srcdir=/home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/vitis/cnn_ip_v1/axil_conv2D/hls sort_interfaces_ports=false
+INFO: Copied 1 ipmisc file(s) to /home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/vitis/cnn_ip_v1/axil_conv2D/hls/impl/ip/misc
+INFO: Copied 6 verilog file(s) to /home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/vitis/cnn_ip_v1/axil_conv2D/hls/impl/ip/hdl/verilog
+INFO: Copied 6 vhdl file(s) to /home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/vitis/cnn_ip_v1/axil_conv2D/hls/impl/ip/hdl/vhdl
+INFO: Copied 10 swdriver file(s) to /home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/vitis/cnn_ip_v1/axil_conv2D/hls/impl/ip/drivers
+ipx::create_core: Time (s): cpu = 00:00:14 ; elapsed = 00:00:23 . Memory (MB): peak = 1466.793 ; gain = 120.836 ; free physical = 229 ; free virtual = 2649
+INFO: Import ports from HDL: /home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/vitis/cnn_ip_v1/axil_conv2D/hls/impl/ip/hdl/vhdl/axil_conv2D.vhd (axil_conv2D)
+INFO: Add axi4lite interface s_axi_BUS1
+INFO: Add clock interface ap_clk
+INFO: Add reset interface ap_rst_n
+INFO: Add interrupt interface interrupt
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/ares/tools/Xilinx/Vivado/2024.1/data/ip'.
+INFO: Calling post_process_vitis to specialize IP
+INFO: Calling post_process_sysgen to specialize IP
+Generating sysgen info xml from json file
+INFO: Created IP /home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/vitis/cnn_ip_v1/axil_conv2D/hls/impl/ip/component.xml
+INFO: Created IP archive /home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/vitis/cnn_ip_v1/axil_conv2D/hls/impl/ip/xilinx_com_hls_axil_conv2D_1_0.zip
+INFO: [Common 17-206] Exiting Vivado at Thu May 29 18:21:56 2025...

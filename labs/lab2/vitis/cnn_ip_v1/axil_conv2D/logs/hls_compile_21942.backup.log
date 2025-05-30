@@ -1,0 +1,177 @@
+INFO: [v++ 60-1548] Creating build summary session with primary output /home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/vitis/cnn_ip_v1/axil_conv2D/axil_conv2D.hlscompile_summary, at Wed May 28 13:20:39 2025
+INFO: [v++ 82-31] Launching vitis_hls: vitis_hls -nolog -run csynth -work_dir /home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/vitis/cnn_ip_v1/axil_conv2D -config /home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/vitis/cnn_ip_v1/hls_config.cfg -cmdlineconfig /home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/vitis/cnn_ip_v1/axil_conv2D/hls/config.cmdline
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2024.1.2 (64-bit)
+  **** SW Build 5096458 on Sep  5 2024
+  **** IP Build 5164407 on Fri Sep  6 08:18:11 MDT 2024
+  **** SharedData Build 5164864 on Thu Sep 05 13:09:09 MDT 2024
+  **** Start of session at: Wed May 28 13:20:42 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source /home/ares/tools/Xilinx/Vitis_HLS/2024.1/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] For user 'ares' on host 'ares' (Linux_x86_64 version 5.15.0-139-generic) on Wed May 28 13:20:46 WEST 2025
+INFO: [HLS 200-10] On os Linux Mint 21.2
+INFO: [HLS 200-10] In directory '/home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/vitis/cnn_ip_v1'
+INFO: [HLS 200-2005] Using work_dir /home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/vitis/cnn_ip_v1/axil_conv2D 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'syn.file=/home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/simple_cnn/axil_conv2D.h' from /home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/vitis/cnn_ip_v1/hls_config.cfg(8)
+INFO: [HLS 200-10] Adding design file '/home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/simple_cnn/axil_conv2D.h' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/simple_cnn/axil_conv2D.cpp' from /home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/vitis/cnn_ip_v1/hls_config.cfg(9)
+INFO: [HLS 200-10] Adding design file '/home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/simple_cnn/axil_conv2D.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=/home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/simple_cnn/tb_axil_conv2D.cpp' from /home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/vitis/cnn_ip_v1/hls_config.cfg(10)
+INFO: [HLS 200-10] Adding test bench file '/home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/simple_cnn/tb_axil_conv2D.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.top=axil_conv2D' from /home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/vitis/cnn_ip_v1/hls_config.cfg(7)
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from /home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/vitis/cnn_ip_v1/hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'part=xc7z010clg400-1' from /home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/vitis/cnn_ip_v1/hls_config.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xc7z010-clg400-1'
+INFO: [HLS 200-1465] Applying ini 'clock=10ns' from /home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/vitis/cnn_ip_v1/hls_config.cfg(11)
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1465] Applying ini 'clock_uncertainty=27%' from /home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/vitis/cnn_ip_v1/hls_config.cfg(12)
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 2.7ns.
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from /home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/vitis/cnn_ip_v1/hls_config.cfg(5)
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 6.08 seconds. CPU system time: 0.57 seconds. Elapsed time: 7.11 seconds; current allocated memory: 256.977 MB.
+INFO: [HLS 200-10] Analyzing design file '../../simple_cnn/axil_conv2D.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 8.62 seconds. CPU system time: 0.99 seconds. Elapsed time: 9.96 seconds; current allocated memory: 259.074 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 9,565 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/vitis/cnn_ip_v1/axil_conv2D/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 978 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/vitis/cnn_ip_v1/axil_conv2D/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 450 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: /home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/vitis/cnn_ip_v1/axil_conv2D/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 395 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: /home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/vitis/cnn_ip_v1/axil_conv2D/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 311 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: /home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/vitis/cnn_ip_v1/axil_conv2D/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 315 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: /home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/vitis/cnn_ip_v1/axil_conv2D/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 315 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: /home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/vitis/cnn_ip_v1/axil_conv2D/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 315 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/vitis/cnn_ip_v1/axil_conv2D/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 315 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/vitis/cnn_ip_v1/axil_conv2D/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 318 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/vitis/cnn_ip_v1/axil_conv2D/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 318 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: /home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/vitis/cnn_ip_v1/axil_conv2D/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 315 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/vitis/cnn_ip_v1/axil_conv2D/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 315 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/vitis/cnn_ip_v1/axil_conv2D/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 315 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: /home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/vitis/cnn_ip_v1/axil_conv2D/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 324 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: /home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/vitis/cnn_ip_v1/axil_conv2D/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 337 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: /home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/vitis/cnn_ip_v1/axil_conv2D/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-291] Loop 'loop_x' is marked as complete unroll implied by the pipeline pragma (../../simple_cnn/axil_conv2D.cpp:44:17)
+INFO: [HLS 214-186] Unrolling loop 'loop_x' (../../simple_cnn/axil_conv2D.cpp:44:17) in function 'axil_conv2D' completely with a factor of 3 (../../simple_cnn/axil_conv2D.cpp:16:0)
+WARNING: [HLS 214-167] The program may have out of bound array access on variable 'image_out' (../../simple_cnn/axil_conv2D.cpp:56:47)
+INFO: [HLS 214-376] automatically set the pipeline for Loop< loop_n> at ../../simple_cnn/axil_conv2D.cpp:62:9 
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 5.42 seconds. CPU system time: 0.57 seconds. Elapsed time: 9.06 seconds; current allocated memory: 260.738 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 260.738 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 261.191 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 261.266 MB.
+INFO: [XFORM 203-11] Balancing expressions in function 'axil_conv2D' (../../simple_cnn/axil_conv2D.cpp:12:13)...3 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.17 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.22 seconds; current allocated memory: 284.723 MB.
+INFO: [HLS 200-2061] Successfully converted nested loops 'loop_j'(../../simple_cnn/axil_conv2D.cpp:29:9) and 'loop_k'(../../simple_cnn/axil_conv2D.cpp:37:13) in function 'axil_conv2D' into perfectly nested loops.
+INFO: [HLS 200-2061] Successfully converted nested loops 'loop_i'(../../simple_cnn/axil_conv2D.cpp:27:5) and 'loop_j'(../../simple_cnn/axil_conv2D.cpp:29:9) in function 'axil_conv2D' into perfectly nested loops.
+INFO: [XFORM 203-541] Flattening a loop nest 'loop_j' (../../simple_cnn/axil_conv2D.cpp:29:9) in function 'axil_conv2D'.
+INFO: [XFORM 203-541] Flattening a loop nest 'loop_i' (../../simple_cnn/axil_conv2D.cpp:27:5) in function 'axil_conv2D'.
+WARNING: [XFORM 203-561] 'loop_n' (../../simple_cnn/axil_conv2D.cpp:62:9) in function 'axil_conv2D' is an infinite loop.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.19 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.24 seconds; current allocated memory: 295.332 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'axil_conv2D' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'axil_conv2D_Pipeline_loop_i_loop_j_loop_k' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln56) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=image_1d_idx) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'loop_i_loop_j_loop_k'.
+WARNING: [HLS 200-885] The II Violation in module 'axil_conv2D_Pipeline_loop_i_loop_j_loop_k' (loop 'loop_i_loop_j_loop_k'): Unable to schedule 'load' operation 32 bit ('image_in_load', ../../simple_cnn/axil_conv2D.cpp:46) on array 'image_in' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'image_in'.
+Resolution: For help on HLS 200-885 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'axil_conv2D_Pipeline_loop_i_loop_j_loop_k' (loop 'loop_i_loop_j_loop_k'): Unable to schedule 'load' operation 32 bit ('image_in_load_1', ../../simple_cnn/axil_conv2D.cpp:47) on array 'image_in' due to limited memory ports (II = 2). Please consider using a memory core with more ports or partitioning the array 'image_in'.
+Resolution: For help on HLS 200-885 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'axil_conv2D_Pipeline_loop_i_loop_j_loop_k' (loop 'loop_i_loop_j_loop_k'): Unable to schedule 'load' operation 32 bit ('image_in_load_2', ../../simple_cnn/axil_conv2D.cpp:48) on array 'image_in' due to limited memory ports (II = 3). Please consider using a memory core with more ports or partitioning the array 'image_in'.
+Resolution: For help on HLS 200-885 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'axil_conv2D_Pipeline_loop_i_loop_j_loop_k' (loop 'loop_i_loop_j_loop_k'): Unable to schedule 'load' operation 32 bit ('image_in_load_3', ../../simple_cnn/axil_conv2D.cpp:46) on array 'image_in' due to limited memory ports (II = 4). Please consider using a memory core with more ports or partitioning the array 'image_in'.
+Resolution: For help on HLS 200-885 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'axil_conv2D_Pipeline_loop_i_loop_j_loop_k' (loop 'loop_i_loop_j_loop_k'): Unable to schedule 'load' operation 32 bit ('image_in_load_6', ../../simple_cnn/axil_conv2D.cpp:46) on array 'image_in' due to limited memory ports (II = 7). Please consider using a memory core with more ports or partitioning the array 'image_in'.
+Resolution: For help on HLS 200-885 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'axil_conv2D_Pipeline_loop_i_loop_j_loop_k' (loop 'loop_i_loop_j_loop_k'): Unable to schedule 'load' operation 32 bit ('image_in_load_7', ../../simple_cnn/axil_conv2D.cpp:47) on array 'image_in' due to limited memory ports (II = 8). Please consider using a memory core with more ports or partitioning the array 'image_in'.
+Resolution: For help on HLS 200-885 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-885.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 9, Depth = 19, loop 'loop_i_loop_j_loop_k'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.76 seconds. CPU system time: 0.04 seconds. Elapsed time: 1.1 seconds; current allocated memory: 296.840 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.08 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.11 seconds; current allocated memory: 296.840 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'axil_conv2D_Pipeline_loop_n' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'loop_n'.
+WARNING: [HLS 200-880] The II Violation in module 'axil_conv2D_Pipeline_loop_n' (loop 'loop_n'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'store' operation 0 bit ('image_out_addr_write_ln64', ../../simple_cnn/axil_conv2D.cpp:64) of variable 'image_out_load_1', ../../simple_cnn/axil_conv2D.cpp:63 on array 'image_out' and 'load' operation 16 bit ('image_out_load', ../../simple_cnn/axil_conv2D.cpp:63) on array 'image_out'.
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'axil_conv2D_Pipeline_loop_n' (loop 'loop_n'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between 'store' operation 0 bit ('image_out_addr_write_ln64', ../../simple_cnn/axil_conv2D.cpp:64) of variable 'image_out_load_1', ../../simple_cnn/axil_conv2D.cpp:63 on array 'image_out' and 'load' operation 16 bit ('image_out_load', ../../simple_cnn/axil_conv2D.cpp:63) on array 'image_out'.
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'axil_conv2D_Pipeline_loop_n' (loop 'loop_n'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between 'store' operation 0 bit ('image_out_addr_write_ln70', ../../simple_cnn/axil_conv2D.cpp:70) of variable 'image_out_load_5', ../../simple_cnn/axil_conv2D.cpp:69 on array 'image_out' and 'load' operation 16 bit ('image_out_load', ../../simple_cnn/axil_conv2D.cpp:63) on array 'image_out'.
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'axil_conv2D_Pipeline_loop_n' (loop 'loop_n'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between 'store' operation 0 bit ('image_out_addr_write_ln70', ../../simple_cnn/axil_conv2D.cpp:70) of variable 'image_out_load_5', ../../simple_cnn/axil_conv2D.cpp:69 on array 'image_out' and 'load' operation 16 bit ('image_out_load', ../../simple_cnn/axil_conv2D.cpp:63) on array 'image_out'.
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-885] The II Violation in module 'axil_conv2D_Pipeline_loop_n' (loop 'loop_n'): Unable to schedule 'load' operation 16 bit ('image_out_load_1', ../../simple_cnn/axil_conv2D.cpp:63) on array 'image_out' due to limited memory ports (II = 7). Please consider using a memory core with more ports or partitioning the array 'image_out'.
+Resolution: For help on HLS 200-885 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'axil_conv2D_Pipeline_loop_n' (loop 'loop_n'): Unable to schedule 'load' operation 16 bit ('image_out_load_1', ../../simple_cnn/axil_conv2D.cpp:63) on array 'image_out' due to limited memory ports (II = 9). Please consider using a memory core with more ports or partitioning the array 'image_out'.
+Resolution: For help on HLS 200-885 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-885.html
+WARNING: [HLS 200-885] The II Violation in module 'axil_conv2D_Pipeline_loop_n' (loop 'loop_n'): Unable to schedule 'load' operation 16 bit ('image_out_load', ../../simple_cnn/axil_conv2D.cpp:63) on array 'image_out' due to limited memory ports (II = 10). Please consider using a memory core with more ports or partitioning the array 'image_out'.
+Resolution: For help on HLS 200-885 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-885.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 11, Depth = 13, loop 'loop_n'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.2 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.25 seconds; current allocated memory: 296.840 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 296.840 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'axil_conv2D' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 296.840 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 296.840 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'axil_conv2D_Pipeline_loop_i_loop_j_loop_k' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'axil_conv2D_Pipeline_loop_i_loop_j_loop_k' pipeline 'loop_i_loop_j_loop_k' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'ama_addmuladd_2ns_7ns_7ns_7ns_13_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_7ns_7ns_7ns_11_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'axil_conv2D_Pipeline_loop_i_loop_j_loop_k'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.11 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.13 seconds; current allocated memory: 297.148 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'axil_conv2D_Pipeline_loop_n' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'axil_conv2D_Pipeline_loop_n'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.22 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.24 seconds; current allocated memory: 301.852 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'axil_conv2D' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'axil_conv2D/image_in' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'axil_conv2D/image_out' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'axil_conv2D/max_out' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'axil_conv2D/weights' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'axil_conv2D/bias' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'axil_conv2D' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'bias', 'weights', 'max_out', 'image_out', 'image_in' to AXI-Lite port BUS1.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'axil_conv2D'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.11 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.16 seconds; current allocated memory: 302.820 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.4 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.48 seconds; current allocated memory: 305.930 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.81 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.86 seconds; current allocated memory: 310.969 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for axil_conv2D.
+INFO: [VLOG 209-307] Generating Verilog RTL for axil_conv2D.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 138.62 MHz
+INFO: [HLS 200-112] Total CPU user time: 23.44 seconds. Total CPU system time: 2.35 seconds. Total elapsed time: 30.34 seconds; peak allocated memory: 311.117 MB.
+INFO: [v++ 60-791] Total elapsed time: 0h 0m 41s

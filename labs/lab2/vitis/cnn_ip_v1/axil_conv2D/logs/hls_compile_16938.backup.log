@@ -1,0 +1,46 @@
+INFO: [v++ 60-1548] Creating build summary session with primary output /home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/vitis/cnn_ip_v1/axil_conv2D/axil_conv2D.hlscompile_summary, at Wed May 28 11:57:19 2025
+INFO: [v++ 82-31] Launching vitis_hls: vitis_hls -nolog -run csynth -work_dir /home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/vitis/cnn_ip_v1/axil_conv2D -config /home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/vitis/cnn_ip_v1/hls_config.cfg -cmdlineconfig /home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/vitis/cnn_ip_v1/axil_conv2D/hls/config.cmdline
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2024.1.2 (64-bit)
+  **** SW Build 5096458 on Sep  5 2024
+  **** IP Build 5164407 on Fri Sep  6 08:18:11 MDT 2024
+  **** SharedData Build 5164864 on Thu Sep 05 13:09:09 MDT 2024
+  **** Start of session at: Wed May 28 11:57:21 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source /home/ares/tools/Xilinx/Vitis_HLS/2024.1/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] For user 'ares' on host 'ares' (Linux_x86_64 version 5.15.0-139-generic) on Wed May 28 11:57:25 WEST 2025
+INFO: [HLS 200-10] On os Linux Mint 21.2
+INFO: [HLS 200-10] In directory '/home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/vitis/cnn_ip_v1'
+INFO: [HLS 200-2005] Using work_dir /home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/vitis/cnn_ip_v1/axil_conv2D 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'syn.file=/home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/simple_cnn/axil_conv2D.h' from /home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/vitis/cnn_ip_v1/hls_config.cfg(8)
+INFO: [HLS 200-10] Adding design file '/home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/simple_cnn/axil_conv2D.h' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/simple_cnn/axil_conv2D.cpp' from /home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/vitis/cnn_ip_v1/hls_config.cfg(9)
+INFO: [HLS 200-10] Adding design file '/home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/simple_cnn/axil_conv2D.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=/home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/simple_cnn/tb_axil_conv2D.cpp' from /home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/vitis/cnn_ip_v1/hls_config.cfg(10)
+INFO: [HLS 200-10] Adding test bench file '/home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/simple_cnn/tb_axil_conv2D.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.top=axil_conv2D' from /home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/vitis/cnn_ip_v1/hls_config.cfg(7)
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from /home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/vitis/cnn_ip_v1/hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'part=xc7z010clg400-1' from /home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/vitis/cnn_ip_v1/hls_config.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xc7z010-clg400-1'
+INFO: [HLS 200-1465] Applying ini 'clock=10ns' from /home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/vitis/cnn_ip_v1/hls_config.cfg(11)
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1465] Applying ini 'clock_uncertainty=27%' from /home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/vitis/cnn_ip_v1/hls_config.cfg(12)
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 2.7ns.
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from /home/ares/Desktop/CO-Proj/Labs/hwswcode/labs/lab2/vitis/cnn_ip_v1/hls_config.cfg(5)
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 4.95 seconds. CPU system time: 0.43 seconds. Elapsed time: 5.31 seconds; current allocated memory: 257.152 MB.
+INFO: [HLS 200-10] Analyzing design file '../../simple_cnn/axil_conv2D.cpp' ... 
+ERROR: [HLS 207-1213] expected ';' after expression (../../simple_cnn/axil_conv2D.cpp:69:80)
+WARNING: [HLS 207-4899] implicit conversion from 'int' to 'signed __attribute__((bitwidth(1))) ' changes value from 1 to -1 (/home/ares/tools/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/etc/ap_fixed_base.h:347:21)
+INFO: [HLS 207-4526] in instantiation of member function 'ap_fixed_base<1, 7, true, AP_TRN, AP_WRAP, 0>::overflow_adjust' requested here (/home/ares/tools/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/etc/ap_fixed_base.h:905:7)
+INFO: [HLS 207-4235] in instantiation of function template specialization 'ap_fixed_base<1, 7, true, AP_TRN, AP_WRAP, 0>::operator=<33, 33, true, AP_TRN, AP_WRAP, 0>' requested here (/home/ares/tools/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/etc/ap_fixed_base.h:423:5)
+INFO: [HLS 207-4235] in instantiation of function template specialization 'ap_fixed_base<1, 7, true, AP_TRN, AP_WRAP, 0>::ap_fixed_base<33, true>' requested here (/home/ares/tools/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/ap_fixed.h:67:136)
+INFO: [HLS 207-4235] in instantiation of function template specialization 'ap_fixed<1, 7, AP_TRN, AP_WRAP, 0>::ap_fixed<33, true>' requested here (../../simple_cnn/axil_conv2D.cpp:45:55)
+WARNING: [HLS 207-4899] implicit conversion from 'int' to 'signed __attribute__((bitwidth(1))) ' changes value from 1 to -1 (/home/ares/tools/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/etc/ap_fixed_base.h:351:21)
+ERROR:  
+INFO: [HLS 200-112] Total CPU user time: 6.46 seconds. Total CPU system time: 0.82 seconds. Total elapsed time: 7.22 seconds; peak allocated memory: 258.793 MB.

@@ -1,0 +1,142 @@
+
+
+================================================================
+== Synthesis Summary Report of 'axil_conv2D'
+================================================================
++ General Information: 
+    * Date:           Thu May 29 18:19:09 2025
+    * Version:        2024.1.2 (Build 5096458 on Sep  5 2024)
+    * Project:        axil_conv2D
+    * Solution:       hls (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z010-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +---------------------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+--------+----------+-----------+-----+
+    |                Modules                | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |         |        |          |           |     |
+    |                & Loops                | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|  BRAM   |   DSP  |    FF    |    LUT    | URAM|
+    +---------------------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+--------+----------+-----------+-----+
+    |+ axil_conv2D                          |     -|  0.79|        -|          -|         -|        -|     -|        no|  10 (8%)|  1 (1%)|  493 (1%)|   746 (4%)|    -|
+    | + axil_conv2D_Pipeline_loop_i_loop_j  |     -|  0.98|     7402|  7.402e+04|         -|     7402|     -|        no|        -|  1 (1%)|  52 (~0%)|  140 (~0%)|    -|
+    |  o loop_i_loop_j                      |     -|  7.30|     7400|  7.400e+04|         6|        1|  7396|       yes|        -|       -|         -|          -|    -|
+    | + axil_conv2D_Pipeline_loop_n         |     -|  0.79|        -|          -|         -|        -|     -|        no|        -|       -|  76 (~0%)|   201 (1%)|    -|
+    |  o loop_n                             |    II|  7.30|        -|          -|        13|       11|     -|       yes|        -|       -|         -|          -|    -|
+    +---------------------------------------+------+------+---------+-----------+----------+---------+------+----------+---------+--------+----------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* S_AXILITE Interfaces
++------------+------------+---------------+--------+----------+-------------------+
+| Interface  | Data Width | Address Width | Offset | Register | Resource Estimate |
++------------+------------+---------------+--------+----------+-------------------+
+| s_axi_BUS1 | 32         | 17            | 65536  | 0        | BRAM=10           |
++------------+------------+---------------+--------+----------+-------------------+
+
+* S_AXILITE Registers
++------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface  | Register | Offset | Width | Access | Description                      | Bit Fields                                                           |
++------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_BUS1 | CTRL     | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_BUS1 | GIER     | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_BUS1 | IP_IER   | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_BUS1 | IP_ISR   | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
+| s_axi_BUS1 | bias     | 0x10   | 32    | W      | Data signal of bias              |                                                                      |
++------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++-----------+-----------+---------------------------------------+
+| Argument  | Direction | Datatype                              |
++-----------+-----------+---------------------------------------+
+| image_in  | unused    | ap_fixed<16, 16, AP_TRN, AP_WRAP, 0>* |
+| image_out | inout     | ap_fixed<16, 16, AP_TRN, AP_WRAP, 0>* |
+| max_out   | out       | ap_fixed<16, 16, AP_TRN, AP_WRAP, 0>* |
+| weights   | unused    | ap_fixed<1, 15, AP_TRN, AP_WRAP, 0>*  |
+| bias      | in        | ap_fixed<1, 15, AP_TRN, AP_WRAP, 0>   |
++-----------+-----------+---------------------------------------+
+
+* SW-to-HW Mapping
++-----------+--------------+----------+-----------------------------------------+
+| Argument  | HW Interface | HW Type  | HW Info                                 |
++-----------+--------------+----------+-----------------------------------------+
+| image_in  | s_axi_BUS1   | memory   | name=image_in offset=65536 range=65536  |
+| image_out | s_axi_BUS1   | memory   | name=image_out offset=16384 range=16384 |
+| max_out   | s_axi_BUS1   | memory   | name=max_out offset=4096 range=4096     |
+| weights   | s_axi_BUS1   | memory   | name=weights offset=32 range=32         |
+| bias      | s_axi_BUS1   | register | name=bias offset=0x10 range=32          |
++-----------+--------------+----------+-----------------------------------------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++---------------------------------------+-----+--------+---------------+--------+-----------+---------+
+| Name                                  | DSP | Pragma | Variable      | Op     | Impl      | Latency |
++---------------------------------------+-----+--------+---------------+--------+-----------+---------+
+| + axil_conv2D                         | 1   |        |               |        |           |         |
+|  + axil_conv2D_Pipeline_loop_i_loop_j | 1   |        |               |        |           |         |
+|    icmp_ln27_fu_94_p2                 |     |        | icmp_ln27     | seteq  | auto      | 0       |
+|    add_ln27_fu_100_p2                 |     |        | add_ln27      | add    | fabric    | 0       |
+|    icmp_ln29_fu_117_p2                |     |        | icmp_ln29     | seteq  | auto      | 0       |
+|    select_ln27_fu_123_p3              |     |        | select_ln27   | select | auto_sel  | 0       |
+|    add_ln27_1_fu_131_p2               |     |        | add_ln27_1    | add    | fabric    | 0       |
+|    select_ln27_1_fu_137_p3            |     |        | select_ln27_1 | select | auto_sel  | 0       |
+|    mac_muladd_7ns_7ns_7ns_13_4_1_U1   | 1   |        | mul_ln29      | mul    | dsp_slice | 3       |
+|    mac_muladd_7ns_7ns_7ns_13_4_1_U1   | 1   |        | add_ln56      | add    | dsp_slice | 3       |
+|    j_1_fu_149_p2                      |     |        | j_1           | add    | fabric    | 0       |
+|  + axil_conv2D_Pipeline_loop_n        | 0   |        |               |        |           |         |
+|    grp_fu_107_p2                      |     |        | icmp_ln63     | setlt  | auto      | 0       |
+|    add_ln66_fu_149_p2                 |     |        | add_ln66      | add    | fabric    | 0       |
+|    add_ln66_1_fu_165_p2               |     |        | add_ln66_1    | add    | fabric    | 0       |
+|    icmp_ln66_fu_160_p2                |     |        | icmp_ln66     | setlt  | auto      | 0       |
+|    grp_fu_107_p2                      |     |        | icmp_ln69     | setlt  | auto      | 0       |
++---------------------------------------+-----+--------+---------------+--------+-----------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
++----------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
+| Name           | Usage     | Type      | BRAM | URAM | Pragma | Variable | Impl | Latency | Bitwidth, Depth, |
+|                |           |           |      |      |        |          |      |         | Banks            |
++----------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
+| + axil_conv2D  |           |           | 10   | 0    |        |          |      |         |                  |
+|   BUS1_s_axi_U | interface | s_axilite | 10   |      |        |          |      |         |                  |
++----------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------+--------------------------------------+----------------------------------------------------------------------+
+| Type      | Options                              | Location                                                             |
++-----------+--------------------------------------+----------------------------------------------------------------------+
+| interface | s_axilite port=return bundle=BUS1    | ../../simple_cnn/hw_cnn/axil_conv2D.cpp:18 in axil_conv2d, return    |
+| interface | s_axilite port=image_in bundle=BUS1  | ../../simple_cnn/hw_cnn/axil_conv2D.cpp:19 in axil_conv2d, image_in  |
+| interface | s_axilite port=image_out bundle=BUS1 | ../../simple_cnn/hw_cnn/axil_conv2D.cpp:20 in axil_conv2d, image_out |
+| interface | s_axilite port=max_out bundle=BUS1   | ../../simple_cnn/hw_cnn/axil_conv2D.cpp:21 in axil_conv2d, max_out   |
+| interface | s_axilite port=weights bundle=BUS1   | ../../simple_cnn/hw_cnn/axil_conv2D.cpp:22 in axil_conv2d, weights   |
+| interface | s_axilite port=bias bundle=BUS1      | ../../simple_cnn/hw_cnn/axil_conv2D.cpp:23 in axil_conv2d, bias      |
+| pipeline  |                                      | ../../simple_cnn/hw_cnn/axil_conv2D.cpp:38 in axil_conv2d            |
++-----------+--------------------------------------+----------------------------------------------------------------------+
+
+
