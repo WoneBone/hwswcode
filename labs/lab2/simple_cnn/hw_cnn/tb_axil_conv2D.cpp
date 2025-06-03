@@ -78,14 +78,27 @@ void sw_convolution_2D(const float *matrix_in, float *matrix_out) {
             max_in[i * OUTPUT_WIDTH + j] = accum;
         }
 
-    for(int m = 0; m < OUTPUT_HEIGHT; m=+2){
-        for(int n = 0; n < OUTPUT_WIDTH; n=+2){
+    for(int m = 0; m < OUTPUT_HEIGHT; m+=2){
+        for(int n = 0; n < OUTPUT_WIDTH; n+=2){
 			float tp_max1 = max_in[m*OUTPUT_WIDTH + n] > max_in[m*OUTPUT_WIDTH + n + 1] ? max_in[m*OUTPUT_WIDTH + n] : max_in[m*OUTPUT_WIDTH + n + 1];
 			float tp_max2 = max_in[(m + 1)*OUTPUT_WIDTH + n] > max_in[(m + 1) *OUTPUT_WIDTH + n + 1] ? max_in[(m+1)*OUTPUT_WIDTH + n] : max_in[(m + 1)*OUTPUT_WIDTH + n + 1];
-			matrix_out[(m*OUTPUT_WIDTH + n)/2] = tp_max1 > tp_max2 ? tp_max1 : tp_max2;
+			matrix_out[(m / 2) * MAX_OUT_SIZE + (n / 2)] = tp_max1 > tp_max2 ? tp_max1 : tp_max2;
 		}
 	}
 }
+int float2fixed(float f, int scale) {
+    return (int)(f * (float)(1 << scale) + 0.5F);
+}
+void normalize_image(const unsigned char *rgb_image, float *norm_image, int *norm_image_fixed) {
+    /* Scales image pixels to be floating-point values in range [-1, 1] */
+    for (int i = 0; i < IMAGE_SIZE; i++){
+        norm_image[i] = ((float) rgb_image[i] / 255 - 0.5F) / 0.5F;
+        norm_image_fixed[i]=float2fixed(norm_image[i],16);
+    }
+
+}
+
+
 
 int main() {
     printf("Input Image\n\r");
@@ -112,24 +125,24 @@ int main() {
 
     sw_convolution_2D(image_fp, sw_image_out);
 
-    /*printf("Output Image\n\r");
+    printf("Output Image\n\r");
     for (int i = 0; i < MAX_OUT_SIZE; i++) {
         for (int j = 0; j < MAX_OUT_SIZE; j++) {
-            printf("%4d ", sw_image_out[i * OUTPUT_WIDTH + j]);
+            printf("%4f ", sw_image_out[i * MAX_OUT_SIZE + j]);
         }
         printf("\n\r");
     }
-	*/
+	
 
 #ifdef HW_IP
     int err_cnt = 0;
     for (int i = 0; i < MAX_OUT_SIZE; i++)
         for (int j = 0; j < MAX_OUT_SIZE; j++){
 			float v = fixed2float(max_out[i * MAX_OUT_SIZE + j], 16);
-            if ((v - sw_image_out[i * MAX_OUT_SIZE + j]) > 0.05) {
+            if ((v - sw_image_out[i * MAX_OUT_SIZE + j]) > 0.0005) {
                 err_cnt++;
                 printf("%d,%d: %f != %f\n\r",
-                       i, j, v, sw_image_out[i * OUTPUT_WIDTH + j]);
+                       i, j, v, sw_image_out[i * MAX_OUT_SIZE + j]);
             }
 		}
 

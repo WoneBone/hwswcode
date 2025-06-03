@@ -1,0 +1,121 @@
+Layer 1 (Convolutional) took 66 ms.
+Layer 2 (Pooling) took 3 ms.
+Layer 3 (Fully-Connected) took 7 ms.
+Layer 4 (Soft-max) took 0.001 ms.
+total time 76 ms 
+# Image in sw 001 -> Class=0 (Airplane)  85% [  85%   0%   1%   1%   1%   0%   0%   0%  10%   2% ] OK
+Layer 1 (Convolutional) took 36 ms.
+Layer 2 (Pooling) took 0 ms.
+Layer 3 (Fully-Connected) took 7 ms.
+Layer 4 (Soft-max) took 0.001 ms.
+total time 43 ms 
+# Image 001 -> Class=0 (Airplane)  85% [  85%   0%   1%   1%   1%   0%   0%   0%  10%   2% ] OK
+Layer 1 (Convolutional) took 66 ms.
+Layer 2 (Pooling) took 3 ms.
+Layer 3 (Fully-Connected) took 7 ms.
+Layer 4 (Soft-max) took 0.001 ms.
+total time 76 ms 
+# Image in sw 002 -> Class=1 (    Bird)  84% [   0%  84%   0%   0%   0%   1%   0%   7%   0%   8% ] OK
+Layer 1 (Convolutional) took 36 ms.
+Layer 2 (Pooling) took 0 ms.
+Layer 3 (Fully-Connected) took 7 ms.
+Layer 4 (Soft-max) took 0.001 ms.
+total time 43 ms 
+# Image 002 -> Class=1 (    Bird)  84% [   0%  84%   0%   0%   0%   1%   0%   7%   0%   8% ] OK
+Layer 1 (Convolutional) took 66 ms.
+Layer 2 (Pooling) took 3 ms.
+Layer 3 (Fully-Connected) took 7 ms.
+Layer 4 (Soft-max) took 0.001 ms.
+total time 76 ms 
+# Image in sw 003 -> Class=2 (     Car) 100% [   0%   0% 100%   0%   0%   0%   0%   0%   0%   0% ] OK
+Layer 1 (Convolutional) took 36 ms.
+Layer 2 (Pooling) took 0 ms.
+Layer 3 (Fully-Connected) took 7 ms.
+Layer 4 (Soft-max) took 0.001 ms.
+total time 43 ms 
+# Image 003 -> Class=2 (     Car) 100% [   0%   0% 100%   0%   0%   0%   0%   0%   0%   0% ] OK
+Layer 1 (Convolutional) took 66 ms.
+Layer 2 (Pooling) took 3 ms.
+Layer 3 (Fully-Connected) took 7 ms.
+Layer 4 (Soft-max) took 0.001 ms.
+total time 76 ms 
+# Image in sw 004 -> Class=3 (     Cat)  41% [   0%   8%   0%  41%   1%  22%   7%  17%   4%   0% ] OK
+Layer 1 (Convolutional) took 36 ms.
+Layer 2 (Pooling) took 0 ms.
+Layer 3 (Fully-Connected) took 7 ms.
+Layer 4 (Soft-max) took 0.001 ms.
+total time 43 ms 
+# Image 004 -> Class=3 (     Cat)  41% [   0%   8%   0%  41%   1%  22%   7%  17%   4%   0% ] OK
+Layer 1 (Convolutional) took 66 ms.
+Layer 2 (Pooling) took 3 ms.
+Layer 3 (Fully-Connected) took 7 ms.
+Layer 4 (Soft-max) took 0.001 ms.
+total time 76 ms 
+# Image in sw 005 -> Class=4 (    Deer)  80% [   0%   4%   0%   2%  80%  13%   0%   1%   0%   0% ] OK
+Layer 1 (Convolutional) took 36 ms.
+Layer 2 (Pooling) took 0 ms.
+Layer 3 (Fully-Connected) took 7 ms.
+Layer 4 (Soft-max) took 0.001 ms.
+total time 43 ms 
+# Image 005 -> Class=4 (    Deer)  80% [   0%   4%   0%   2%  80%  13%   0%   1%   0%   0% ] OK
+Layer 1 (Convolutional) took 66 ms.
+Layer 2 (Pooling) took 3 ms.
+Layer 3 (Fully-Connected) took 7 ms.
+Layer 4 (Soft-max) took 0.001 ms.
+total time 76 ms 
+# Image in sw 006 -> Class=5 (     Dog)  59% [   0%   4%   1%   0%   7%  59%   2%  12%   0%  13% ] OK
+Layer 1 (Convolutional) took 36 ms.
+Layer 2 (Pooling) took 0 ms.
+Layer 3 (Fully-Connected) took 7 ms.
+Layer 4 (Soft-max) took 0.001 ms.
+total time 43 ms 
+# Image 006 -> Class=5 (     Dog)  59% [   0%   4%   1%   0%   7%  59%   2%  12%   0%  13% ] OK
+Layer 1 (Convolutional) took 66 ms.
+Layer 2 (Pooling) took 3 ms.
+Layer 3 (Fully-Connected) took 7 ms.
+Layer 4 (Soft-max) took 0.001 ms.
+total time 76 ms 
+# Image in sw 007 -> Class=6 (   Horse)  95% [   0%   0%   0%   1%   0%   3%  95%   0%   0%   0% ] OK
+Layer 1 (Convolutional) took 36 ms.
+Layer 2 (Pooling) took 0 ms.
+Layer 3 (Fully-Connected) took 7 ms.
+Layer 4 (Soft-max) took 0.001 ms.
+total time 43 ms 
+# Image 007 -> Class=6 (   Horse)  95% [   0%   0%   0%   1%   0%   3%  95%   0%   0%   0% ] OK
+Layer 1 (Convolutional) took 66 ms.
+Layer 2 (Pooling) took 3 ms.
+Layer 3 (Fully-Connected) took 7 ms.
+Layer 4 (Soft-max) took 0.001 ms.
+total time 76 ms 
+# Image in sw 008 -> Class=7 (  Monkey)  82% [   0%   5%   0%   1%   2%  10%   0%  82%   0%   0% ] OK
+Layer 1 (Convolutional) took 36 ms.
+Layer 2 (Pooling) took 0 ms.
+Layer 3 (Fully-Connected) took 7 ms.
+Layer 4 (Soft-max) took 0.001 ms.
+total time 43 ms 
+# Image 008 -> Class=7 (  Monkey)  82% [   0%   5%   0%   1%   2%  10%   0%  82%   0%   0% ] OK
+Layer 1 (Convolutional) took 66 ms.
+Layer 2 (Pooling) took 3 ms.
+Layer 3 (Fully-Connected) took 7 ms.
+Layer 4 (Soft-max) took 0.001 ms.
+total time 76 ms 
+# Image in sw 009 -> Class=8 (    Ship)  84% [   6%   0%   4%   0%   0%   0%   0%   0%  84%   6% ] OK
+Layer 1 (Convolutional) took 36 ms.
+Layer 2 (Pooling) took 0 ms.
+Layer 3 (Fully-Connected) took 7 ms.
+Layer 4 (Soft-max) took 0.001 ms.
+total time 43 ms 
+# Image 009 -> Class=8 (    Ship)  84% [   6%   0%   4%   0%   0%   0%   0%   0%  84%   6% ] OK
+Layer 1 (Convolutional) took 66 ms.
+Layer 2 (Pooling) took 3 ms.
+Layer 3 (Fully-Connected) took 7 ms.
+Layer 4 (Soft-max) took 0.001 ms.
+total time 76 ms 
+# Image in sw 010 -> Class=9 (   Truck) 100% [   0%   0%   0%   0%   0%   0%   0%   0%   0% 100% ] OK
+Layer 1 (Convolutional) took 36 ms.
+Layer 2 (Pooling) took 0 ms.
+Layer 3 (Fully-Connected) took 7 ms.
+Layer 4 (Soft-max) took 0.001 ms.
+total time 43 ms 
+# Image 010 -> Class=9 (   Truck) 100% [   0%   0%   0%   0%   0%   0%   0%   0%   0% 100% ] OK
+

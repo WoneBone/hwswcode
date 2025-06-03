@@ -1,12 +1,3 @@
-/**
- * @file axil_conv2D.cpp
- * @date May, 2023
- *
- * Support file for lab1 of Hardware-Software Co-Design 2023
- *
- * Contains the HLS implementation of a simple matrix convolution IP.
- */
-
 #include "axil_conv2D.h"
 
 void axil_conv2D(input_image_t image_in[(IMAGE_HEIGHT * IMAGE_WIDTH*3)],
@@ -57,19 +48,19 @@ void axil_conv2D(input_image_t image_in[(IMAGE_HEIGHT * IMAGE_WIDTH*3)],
         }
     }
     loop_m:
-    for(count_t m = 0; m < OUTPUT_HEIGHT; m=+2){
+    for(count_t m = 0; m <= OUTPUT_HEIGHT-2; m+=2){
         loop_n:
-        for(count_t n = 0; n < OUTPUT_WIDTH; n=+2){
-            if (image_out[(m*OUTPUT_HEIGHT+n)]<image_out[(m*OUTPUT_HEIGHT+n+1)]){
-                image_out[(m*OUTPUT_HEIGHT+n)]=image_out[(m*OUTPUT_HEIGHT+n+1)];
+        for(count_t n = 0; n <= OUTPUT_WIDTH-2; n+=2){
+            if (image_out[(m*OUTPUT_WIDTH+n)]<image_out[(m*OUTPUT_WIDTH+n+1)]){
+                image_out[(m*OUTPUT_WIDTH+n)]=image_out[(m*OUTPUT_WIDTH+n+1)];
             }
-            if(image_out[((m+1)*OUTPUT_HEIGHT+n)]<image_out[((m+1)*OUTPUT_HEIGHT+n+1)]){
-                image_out[((m+1)*OUTPUT_HEIGHT+n)]=image_out[((m+1)*OUTPUT_HEIGHT+n+1)];
+            if(image_out[((m+1)*OUTPUT_WIDTH+n)]<image_out[((m+1)*OUTPUT_WIDTH+n+1)]){
+                image_out[((m+1)*OUTPUT_WIDTH+n)]=image_out[((m+1)*OUTPUT_WIDTH+n+1)];
             }
-            if(image_out[(m*OUTPUT_HEIGHT+n)]<image_out[((m+1)*OUTPUT_HEIGHT+n)]){
-                image_out[(m*OUTPUT_HEIGHT+n)]=image_out[((m+1)*OUTPUT_HEIGHT+n)];
+            if(image_out[(m*OUTPUT_WIDTH+n)]<image_out[((m+1)*OUTPUT_WIDTH+n)]){
+                image_out[(m*OUTPUT_WIDTH+n)]=image_out[((m+1)*OUTPUT_WIDTH+n)];
             }
-            max_out[(m*OUTPUT_HEIGHT+n)/2]=image_out[(m*OUTPUT_HEIGHT+n)];
+            max_out[(m / 2) * MAX_OUT_SIZE + (n / 2)]=image_out[(m*OUTPUT_WIDTH+n)];
         }
     }
 
