@@ -3,21 +3,11 @@
 
 
 
-// void axil_conv2D(input_image_t image_in[(IMAGE_HEIGHT * IMAGE_WIDTH*3)],
-//                  output_image_t image_out[((OUTPUT_HEIGHT * OUTPUT_WIDTH))],
-//                  output_image_t max_out[(MAX_OUT_SIZE*MAX_OUT_SIZE)],
-//                  weight_t weights[KERNEL_SIZE * KERNEL_SIZE*3],
-//                  bias_t bias) {
+
 void axil_conv2D(hls::stream<strmio_t> &strm_in,
                  hls::stream<strmio_t> &strm_out) {
 
-    // #pragma HLS INTERFACE s_axilite port=return bundle=BUS1
-    // #pragma HLS INTERFACE s_axilite port=image_in bundle=BUS1
-    // #pragma HLS INTERFACE s_axilite port=image_out bundle=BUS1
-    // #pragma HLS INTERFACE s_axilite port=max_out bundle=BUS1
-    // #pragma HLS INTERFACE s_axilite port=weights bundle=BUS1
-    // #pragma HLS INTERFACE s_axilite port=bias bundle=BUS1
-    // #pragma HLS INTERFACE ap_ctrl_none port=return
+    
     #pragma HLS INTERFACE ap_ctrl_none port=return
     #pragma HLS interface axis port=strm_in
     #pragma HLS INTERFACE axis port=strm_out
@@ -63,7 +53,7 @@ void axil_conv2D(hls::stream<strmio_t> &strm_in,
             	count_t image_1d_idx = (i + k) * IMAGE_WIDTH + j ; /* start of input row */
                 loop_x:
                 for (count_t x = 0; x < KERNEL_SIZE; x++, kernel_1d_idx++, image_1d_idx++) {
-                    
+                   
                     acc_r += weights[kernel_1d_idx] * image_in[image_1d_idx];
                     acc_g += weights[kernel_1d_idx+9] * image_in[(image_1d_idx+IMAGE_HEIGHT * IMAGE_WIDTH) ];
                     acc_b += weights[kernel_1d_idx+18] * image_in[(image_1d_idx+IMAGE_HEIGHT * IMAGE_WIDTH *2)];
